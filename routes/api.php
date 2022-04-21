@@ -26,12 +26,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('users', UserController::class);
-Route::resource('orders', OrderController::class);
-Route::resource('packages', PackageController::class);
-Route::resource('transactions', TransactionController::class);
-Route::resource('apikeys', APIKeyController::class);
-Route::resource('clientpluginsettings', ClientPluginSettingBackupController::class);
-Route::resource('notifications ', NotificationController::class);
-Route::resource('email', EmailController::class);
-Route::resource('adminsettings', AdminSettingController::class);
+Route::middleware('api.throttle')->group(function() {
+    Route::resource('users', UserController::class);
+    Route::resource('orders', OrderController::class);
+    Route::resource('packages', PackageController::class);
+    Route::resource('transactions', TransactionController::class);
+    Route::resource('apikeys', APIKeyController::class);
+    Route::resource('clientpluginsettings', ClientPluginSettingBackupController::class);
+    Route::resource('notifications ', NotificationController::class);
+    Route::resource('email', EmailController::class);
+    Route::resource('adminsettings', AdminSettingController::class);
+});
