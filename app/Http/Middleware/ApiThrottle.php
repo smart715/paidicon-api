@@ -28,7 +28,7 @@ class ApiThrottle
     public function handle(Request $request, Closure $next)
     {
         $settings = AdminSetting::query()->first();
-        if (!$settings || !in_array(Route::currentRouteName(), $this->ignoreRoutes)) {
+        if (!$settings || in_array(Route::currentRouteName(), $this->ignoreRoutes)) {
             return $next($request);
         }
 
