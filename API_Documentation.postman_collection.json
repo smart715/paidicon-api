@@ -1909,7 +1909,7 @@
 									"type": "text"
 								},
 								{
-									"key": "p_requests_limit",
+									"key": "ip_requests_limit",
 									"value": "55",
 									"type": "text"
 								},

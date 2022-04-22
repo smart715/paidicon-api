@@ -10,10 +10,16 @@ use Illuminate\Support\Str;
 class ClientPluginSettingBackupController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('api.throttleByKey')
+            ->only(['store', 'show']);
+    }
+
     public function index()
     {
         $settings = ClientPluginSetting::all()->toArray();
-        return array_reverse($settings);      
+        return array_reverse($settings);
     }
     public function store(Request $request)
     {
