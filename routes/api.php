@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\CustomNotificationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
@@ -36,4 +37,7 @@ Route::middleware('api.throttle')->group(function() {
     Route::resource('notifications ', NotificationController::class);
     Route::resource('email', EmailController::class);
     Route::resource('adminsettings', AdminSettingController::class);
+
+    Route::post('notification-custom/send', [CustomNotificationController::class,'send']);
+    Route::post('notification-custom/send-multiple', [CustomNotificationController::class,'sendMultiple']);
 });
