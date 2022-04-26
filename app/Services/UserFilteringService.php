@@ -26,14 +26,14 @@ class UserFilteringService
                 $query->where(substr($filter['property'], 5), $filter['symbol'], $filter['value']);
                 break;
             case strpos($filter['property'], 'order.') === 0:
-                $query->whereHas('order.', function ($q) use ($filter) {
+                $query->whereHas('orders', function ($q) use ($filter) {
                     $q->where(substr($filter['property'], 6), $filter['symbol'], $filter['value']);
                 });
                 break;
 
-            case strpos($filter['property'], 'property.') === 0:
-                $query->whereHas('orders', function ($q) use ($filter) {
-                    $q->where(substr($filter['property'], 9), $filter['symbol'], $filter['value']);
+            case strpos($filter['property'], 'transaction.') === 0:
+                $query->whereHas('transactions', function ($q) use ($filter) {
+                    $q->where(substr($filter['property'], 12), $filter['symbol'],$filter['value']);
                 });
                 break;
 
@@ -57,22 +57,22 @@ class UserFilteringService
                 break;
             case 'package_name':
                 $query->whereHas('orders', function ($q) use ($filter) {
-                    $q->whereRelation('packages', 'name', $filter['value']);
+                    $q->whereRelation('package', 'name', $filter['value']);
                 });
                 break;
             case 'total_transactions_referral':
                 $query->whereHas('orders', function ($q) {
-                    $q->whereHas('transaction', 'status', 1);
+                    $q->whereRelation('transaction', 'status', 1);
                 },               $filter['symbol'], $filter['value']);
                 break;
             case 'total_transactions_refund':
                 $query->whereHas('orders', function ($q) {
-                    $q->whereHas('transaction', 'status', 2);
+                    $q->whereRelation('transaction', 'status', 2);
                 },               $filter['symbol'], $filter['value']);
                 break;
             case 'total_transactions_order':
                 $query->whereHas('orders', function ($q) {
-                    $q->whereHas('transaction', 'status', 3);
+                    $q->whereRelation('transaction', 'status', 3);
                 },               $filter['symbol'], $filter['value']);
                 break;
         }
