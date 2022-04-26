@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Models\EmailTemplate;
 use App\Models\Order;
 use App\Models\Package;
 use App\Models\Transaction;

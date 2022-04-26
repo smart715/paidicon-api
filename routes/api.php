@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\CustomNotificationController;
 use App\Http\Controllers\API\CustomEmailController;
 use App\Http\Controllers\API\EmailHistoryController;
 use Illuminate\Http\Request;
@@ -39,6 +40,9 @@ Route::middleware('api.throttle')->group(function() {
     Route::resource('email-template', EmailTemplateController::class);
     Route::resource('email-history', EmailHistoryController::class);
     Route::resource('adminsettings', AdminSettingController::class);
+
+    Route::post('notification-custom/send', [CustomNotificationController::class,'send']);
+    Route::post('notification-custom/send-multiple', [CustomNotificationController::class,'sendMultiple']);
     Route::post('email-custom/send', [CustomEmailController::class, 'send']);
     Route::post('email-custom/send-multiple', [CustomEmailController::class, 'sendMultiple']);
 });
