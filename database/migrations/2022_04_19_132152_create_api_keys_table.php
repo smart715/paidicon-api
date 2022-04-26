@@ -25,10 +25,11 @@ class CreateApiKeysTable extends Migration
             $table->double('ip_requests_limit_seconds');
             $table->double('ip_requests_interval_after_limit_seconds');
             // $table->dateTime('created');
-            $table->string('expires');
+            $table->date('expires');
+            $table->tinyInteger('status')->comment('1-pending,2-active,3-disabled')->default(2);
             // $table->dateTime('updated');
             $table->integer('updated_by_user_id');
-            
+
             $table->timestamps();
         });
     }

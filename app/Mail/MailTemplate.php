@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\ApiKey;
 use App\Models\EmailTemplate;
 use App\Models\Order;
 use App\Models\Package;
@@ -32,10 +33,11 @@ class MailTemplate extends Mailable
         ?User $user = null,
         ?Order $order = null,
         ?Package $package = null,
-        ?Transaction $transaction = null
+        ?Transaction $transaction = null,
+        ?ApiKey $apiKey = null
     ) {
         $this->emailTemplate = $emailTemplate;
-        $this->messageParser = new MessageParser($user, $order, $package, $transaction);
+        $this->messageParser = new MessageParser($user, $order, $package, $transaction, $apiKey);
     }
 
 

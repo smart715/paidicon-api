@@ -2,10 +2,12 @@
 
 namespace App\Services;
 
+use App\Models\ApiKey;
 use App\Models\Order;
 use App\Models\Package;
 use App\Models\Transaction;
 use App\Models\User;
+use Carbon\Carbon;
 
 class MessageParser
 {
@@ -47,6 +49,12 @@ class MessageParser
     public $transactionCreatedAt;
     public $transactionUpdatedAt;
 
+    /** @var ApiKey properties */
+    public $apiKeyUuid;
+    public $apiKeyPackageFeatures;
+    public $expires;
+    public $keyDaysLeft;
+
 
     /**
      * @param User|null $user
@@ -57,7 +65,8 @@ class MessageParser
         ?User $user = null,
         ?Order $order = null,
         ?Package $package = null,
-        ?Transaction $transaction = null
+        ?Transaction $transaction = null,
+        ?ApiKey $apiKey = null
     ) {
         if ($user) {
             $this->fullName = $user->full_name;
@@ -98,6 +107,13 @@ class MessageParser
             $this->transactionUpdatedByUser = $transaction->updated_by_user;
             $this->transactionCreatedAt = $transaction->created_at;
             $this->transactionUpdatedAt = $transaction->updated_at;
+        }
+
+        if($apiKey) {
+            $this->apiKeyUuid = $apiKey->uuid;
+            $this->apiKeyPackageFeatures = $apiKey->package_features;
+            $this->expires = $apiKey->expires;
+            $this->keyDaysLeft = Carbon::today()->diffInDays($apiKey->expires);
         }
     }
 

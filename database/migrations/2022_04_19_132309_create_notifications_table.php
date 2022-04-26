@@ -21,7 +21,7 @@ class CreateNotificationsTable extends Migration
             // $table->dateTime('created');
             // $table->dateTime('updated');
             $table->bigInteger('user_id')->unsigned();
-            $table->integer('updated_by_user_id');
+            $table->integer('updated_by_user_id')->nullable();
             $table->timestamps();
         });
     }
