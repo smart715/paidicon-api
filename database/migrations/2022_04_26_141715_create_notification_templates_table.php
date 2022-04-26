@@ -21,7 +21,8 @@ class CreateNotificationTemplatesTable extends Migration
             $table->text('content');
             // $table->dateTime('created');
             // $table->dateTime('updated');
-            $table->integer('updated_by_user_id');
+            $table->integer('updated_by_user_id')->nullable();
+            $table->integer('status')->comment('1-pending, 2-sent, 3-received')->default(1);
             $table->timestamps();
         });
     }

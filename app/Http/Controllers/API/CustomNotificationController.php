@@ -45,7 +45,7 @@ class CustomNotificationController
                 'title' => $messageParser->parseContent($request->get('title')),
                 'content' => $messageParser->parseContent($request->get('content')),
                 'user_id' => $user->id,
-                'updated_by_user_id' => 0
+                'updated_by_user_id' => null
             ]);
         }
 
