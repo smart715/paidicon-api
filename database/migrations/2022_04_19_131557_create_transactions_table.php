@@ -20,7 +20,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('type')->comment('1-referral_payment, 2-refund, 3-package_order');
             $table->integer('order_id');
             $table->integer('referrer_id');
-            $table->integer('status')->comment('1-pending, 2-cancelled, 3-completed');
+            $table->tinyInteger('status')->comment('1-pending, 2-cancelled, 3-completed');
             // $table->dateTime('created');
             // $table->dateTime('updated');
             $table->integer('updated_by_user_id');

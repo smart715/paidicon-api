@@ -5,18 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Email extends Model
+class EmailTemplate extends Model
 {
     use HasFactory;
-    protected $table="email_templates";
+    /** @var string[]  */
     protected $fillable = [
         'uuid',
         'name',
         'subject',
-        'content',
+        'header',
+        'signature',
         'body',
+        'footer',
         'updated_by_user_id'
-
     ];
 
     protected $hidden = [];
