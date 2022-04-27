@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\CustomNotificationController;
 use App\Http\Controllers\API\CustomEmailController;
 use App\Http\Controllers\API\EmailHistoryController;
+use App\Http\Controllers\API\NotificationTemplateController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
@@ -37,6 +38,7 @@ Route::middleware('api.throttle')->group(function() {
     Route::resource('apikeys', APIKeyController::class);
     Route::resource('clientpluginsettings', ClientPluginSettingBackupController::class);
     Route::resource('notifications ', NotificationController::class);
+    Route::resource('notification-templates', NotificationTemplateController::class);
     Route::resource('email-template', EmailTemplateController::class);
     Route::resource('email-history', EmailHistoryController::class);
     Route::resource('adminsettings', AdminSettingController::class);
