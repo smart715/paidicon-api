@@ -1,1970 +1,2084 @@
 {
-	"info": {
-		"_postman_id": "eec5c9ca-232b-4691-b28d-7990cbeea78f",
-		"name": "Laravel9_api",
-		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "orders",
-			"item": [
-				{
-					"name": "localhost:8000/api/orders",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/orders/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"orders",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/orders",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "user_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "package_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "payment_method",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "transaction_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "amount",
-									"value": "1000",
-									"type": "text"
-								},
-								{
-									"key": "discount",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "discount_reason",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "total_payable",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "package_status",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "1",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/orders",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"orders"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/orders",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/orders/4",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"orders",
-								"4"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/orders",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "user_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "package_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "payment_method",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "transaction_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "amount",
-									"value": "1000",
-									"type": "text"
-								},
-								{
-									"key": "discount",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "discount_reason",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "total_payable",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "package_status",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "1",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/orders/4",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"orders",
-								"4"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/orders",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "user_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "package_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "payment_method",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "transaction_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "amount",
-									"value": "1000",
-									"type": "text"
-								},
-								{
-									"key": "discount",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "discount_reason",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "total_payable",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "package_status",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "1",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/orders/4",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"orders",
-								"4"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "users",
-			"item": [
-				{
-					"name": "localhost:8000/api/users",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "full_name",
-									"value": "MyName",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/users",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"users"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Default",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "localhost:8000/api/users",
-									"host": [
-										"localhost"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"users"
-									]
-								}
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
-				},
-				{
-					"name": "localhost:8000/api/users",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "aw@a.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "1234",
-									"type": "text"
-								},
-								{
-									"key": "full_name",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "company",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "address",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "country",
-									"value": "4",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "5",
-									"type": "text"
-								},
-								{
-									"key": "state",
-									"value": "6",
-									"type": "text"
-								},
-								{
-									"key": "town",
-									"value": "7",
-									"type": "text"
-								},
-								{
-									"key": "role",
-									"value": "8",
-									"type": "text"
-								},
-								{
-									"key": "otp",
-									"value": "9",
-									"type": "text"
-								},
-								{
-									"key": "ach_details",
-									"value": "12",
-									"type": "text"
-								},
-								{
-									"key": "referral_balance",
-									"value": "13",
-									"type": "text"
-								},
-								{
-									"key": "status",
-									"value": "true",
-									"type": "text"
-								},
-								{
-									"key": "package_id",
-									"value": "15",
-									"type": "text"
-								},
-								{
-									"key": "verification_token",
-									"value": "16",
-									"type": "text"
-								},
-								{
-									"key": "password_reset_token",
-									"value": "17",
-									"type": "text"
-								},
-								{
-									"key": "local_id",
-									"value": "18",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/users",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/users",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "aw@a.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "1234",
-									"type": "text"
-								},
-								{
-									"key": "full_name",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "company",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "address",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "country",
-									"value": "4",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "5",
-									"type": "text"
-								},
-								{
-									"key": "state",
-									"value": "6",
-									"type": "text"
-								},
-								{
-									"key": "town",
-									"value": "7",
-									"type": "text"
-								},
-								{
-									"key": "role",
-									"value": "8",
-									"type": "text"
-								},
-								{
-									"key": "otp",
-									"value": "9",
-									"type": "text"
-								},
-								{
-									"key": "ach_details",
-									"value": "12",
-									"type": "text"
-								},
-								{
-									"key": "referral_balance",
-									"value": "13",
-									"type": "text"
-								},
-								{
-									"key": "status",
-									"value": "true",
-									"type": "text"
-								},
-								{
-									"key": "package_id",
-									"value": "15",
-									"type": "text"
-								},
-								{
-									"key": "verification_token",
-									"value": "16",
-									"type": "text"
-								},
-								{
-									"key": "password_reset_token",
-									"value": "17",
-									"type": "text"
-								},
-								{
-									"key": "local_id",
-									"value": "18",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/users/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"users",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/users",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "test@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "1234",
-									"type": "text"
-								},
-								{
-									"key": "full_name",
-									"value": "1234",
-									"type": "text"
-								},
-								{
-									"key": "company",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "address",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "country",
-									"value": "4",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "5",
-									"type": "text"
-								},
-								{
-									"key": "state",
-									"value": "6",
-									"type": "text"
-								},
-								{
-									"key": "town",
-									"value": "7",
-									"type": "text"
-								},
-								{
-									"key": "role",
-									"value": "8",
-									"type": "text"
-								},
-								{
-									"key": "otp",
-									"value": "9",
-									"type": "text"
-								},
-								{
-									"key": "ach_details",
-									"value": "12",
-									"type": "text"
-								},
-								{
-									"key": "referral_balance",
-									"value": "13",
-									"type": "text"
-								},
-								{
-									"key": "status",
-									"value": "true",
-									"type": "text"
-								},
-								{
-									"key": "package_id",
-									"value": "15",
-									"type": "text"
-								},
-								{
-									"key": "verification_token",
-									"value": "16",
-									"type": "text"
-								},
-								{
-									"key": "password_reset_token",
-									"value": "17",
-									"type": "text"
-								},
-								{
-									"key": "local_id",
-									"value": "18",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/users/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"users",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/users",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "test@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "1234",
-									"type": "text"
-								},
-								{
-									"key": "full_name",
-									"value": "1234",
-									"type": "text"
-								},
-								{
-									"key": "company",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "address",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "country",
-									"value": "4",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "5",
-									"type": "text"
-								},
-								{
-									"key": "state",
-									"value": "6",
-									"type": "text"
-								},
-								{
-									"key": "town",
-									"value": "7",
-									"type": "text"
-								},
-								{
-									"key": "role",
-									"value": "8",
-									"type": "text"
-								},
-								{
-									"key": "otp",
-									"value": "9",
-									"type": "text"
-								},
-								{
-									"key": "ach_details",
-									"value": "12",
-									"type": "text"
-								},
-								{
-									"key": "referral_balance",
-									"value": "13",
-									"type": "text"
-								},
-								{
-									"key": "status",
-									"value": "true",
-									"type": "text"
-								},
-								{
-									"key": "package_id",
-									"value": "15",
-									"type": "text"
-								},
-								{
-									"key": "verification_token",
-									"value": "16",
-									"type": "text"
-								},
-								{
-									"key": "password_reset_token",
-									"value": "17",
-									"type": "text"
-								},
-								{
-									"key": "local_id",
-									"value": "18",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/users/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"users",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "packages",
-			"item": [
-				{
-					"name": "localhost:8000/api/packages",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/packages",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"packages"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/packages/1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/packages/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"packages",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/packages/1",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/packages/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"packages",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/packages/1",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "features",
-									"value": "{\"num\":\"whatis\"}",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/packages/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"packages",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/packages",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "aaa",
-									"type": "text"
-								},
-								{
-									"key": "price",
-									"value": "500",
-									"type": "text"
-								},
-								{
-									"key": "features",
-									"value": "{\"num\":\"thisisfeatures\"}",
-									"type": "text"
-								},
-								{
-									"key": "status",
-									"value": "1",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/packages",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"packages"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "transactions",
-			"item": [
-				{
-					"name": "localhost:8000/api/transactions",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/transactions",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"transactions"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/transactions/1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/transactions/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"transactions",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/transactions/1",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/transactions/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"transactions",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/transactions/1",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "order_id",
-									"value": "32433"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/transactions/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"transactions",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/transactions",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "user_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "type",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "order_id",
-									"value": "23",
-									"type": "text"
-								},
-								{
-									"key": "referrer_id",
-									"value": "4242",
-									"type": "text"
-								},
-								{
-									"key": "status",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "44",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/transactions",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"transactions"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "apikeys",
-			"item": [
-				{
-					"name": "localhost:8000/api/apikeys",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/apikeys",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"apikeys"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/apikeys/1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/apikeys/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"apikeys",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/apikeys/1",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/apikeys/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"apikeys",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/apikeys/1",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "restrict_to_ip_address",
-									"value": "192.168.1.1",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/apikeys/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"apikeys",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/apikeys",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "package_id",
-									"value": "1"
-								},
-								{
-									"key": "package_features",
-									"value": "{\"test\":\"test\"}"
-								},
-								{
-									"key": "key",
-									"value": "a"
-								},
-								{
-									"key": "restrict_to_ip_address",
-									"value": "127.0.0.1"
-								},
-								{
-									"key": "user_id",
-									"value": "2"
-								},
-								{
-									"key": "ip_requests_limit",
-									"value": "2321"
-								},
-								{
-									"key": "ip_requests_limit_seconds",
-									"value": "232"
-								},
-								{
-									"key": "expires",
-									"value": "1"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "123"
-								},
-								{
-									"key": "ip_requests_interval_after_limit_seconds",
-									"value": "5555"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/apikeys",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"apikeys"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "clientpluginsettings",
-			"item": [
-				{
-					"name": "localhost:8000/api/clientpluginsettings",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/clientpluginsettings",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"clientpluginsettings"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/clientpluginsettings/1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/clientpluginsettings/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"clientpluginsettings",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/clientpluginsettings/1",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/clientpluginsettings/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"clientpluginsettings",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/clientpluginsettings/1",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "updated_by_user_id",
-									"value": "3333",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/clientpluginsettings/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"clientpluginsettings",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/clientpluginsettings",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "user_id",
-									"value": "56"
-								},
-								{
-									"key": "api_id",
-									"value": "4"
-								},
-								{
-									"key": "settings",
-									"value": "3"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "2"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/clientpluginsettings",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"clientpluginsettings"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "notifications",
-			"item": [
-				{
-					"name": "localhost:8000/api/notifications",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/notifications",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"notifications"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/notifications/1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/notifications/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"notifications",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/notifications/1",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/notifications/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"notifications",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/notifications/1",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/notifications/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"notifications",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/notifications",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "ddds",
-									"type": "text"
-								},
-								{
-									"key": "title",
-									"value": "sss",
-									"type": "text"
-								},
-								{
-									"key": "content",
-									"value": "fff",
-									"type": "text"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "454",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/notifications",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"notifications"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "email",
-			"item": [
-				{
-					"name": "localhost:8000/api/email",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/email",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"email"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/email/1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/email/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"email",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/email/1",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/email/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"email",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/email/1",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/email/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"email",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/email",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "aaa"
-								},
-								{
-									"key": "subject",
-									"value": "dd"
-								},
-								{
-									"key": "content",
-									"value": "ff"
-								},
-								{
-									"key": "body",
-									"value": "gggggg gg"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "2"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/email",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"email"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "adminsettings",
-			"item": [
-				{
-					"name": "localhost:8000/api/adminsettings",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/adminsettings",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"adminsettings"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/adminsettings/1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/adminsettings/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"adminsettings",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/adminsettings/1",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/adminsettings/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"adminsettings",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/adminsettings/1",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "localhost:8000/api/adminsettings/1",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"adminsettings",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "localhost:8000/api/adminsettings",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "site_name",
-									"value": "eeee",
-									"type": "text"
-								},
-								{
-									"key": "timezone",
-									"value": "2132",
-									"type": "text"
-								},
-								{
-									"key": "locale",
-									"value": "2313",
-									"type": "text"
-								},
-								{
-									"key": "maintenance_mode",
-									"value": "2323",
-									"type": "text"
-								},
-								{
-									"key": "maintenance_start",
-									"value": "2020-01-01",
-									"type": "text"
-								},
-								{
-									"key": "maintenance_end",
-									"value": "2022-01-01",
-									"type": "text"
-								},
-								{
-									"key": "maintenance_reason",
-									"value": "rrr",
-									"type": "text"
-								},
-								{
-									"key": "ip_requests_limit",
-									"value": "55",
-									"type": "text"
-								},
-								{
-									"key": "ip_requests_limit_seconds",
-									"value": "66",
-									"type": "text"
-								},
-								{
-									"key": "ip_requests_interval_after_limit_seconds",
-									"value": "555",
-									"type": "text"
-								},
-								{
-									"key": "referral_percentage",
-									"value": "4",
-									"type": "text"
-								},
-								{
-									"key": "minimimum_referral_payout_amount",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "discount_percentage_on_first_payment",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "branding_text",
-									"value": "fff",
-									"type": "text"
-								},
-								{
-									"key": "updated_by_user_id",
-									"value": "2",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:8000/api/adminsettings",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"adminsettings"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	]
+    "info": {
+        "_postman_id": "30ef981c-5898-4939-aea1-c1596b6410a2",
+        "name": "Laravel9_api",
+        "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "orders",
+            "item": [
+                {
+                    "name": "localhost:8000/api/orders",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/orders/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "orders",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/orders",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "payment_method",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "transaction_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "amount",
+                                    "value": "1000",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "discount",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "discount_reason",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "total_payable",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_status",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/orders",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "orders"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/orders",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/orders/4",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "orders",
+                                "4"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/orders",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "payment_method",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "transaction_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "amount",
+                                    "value": "1000",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "discount",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "discount_reason",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "total_payable",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_status",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/orders/4",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "orders",
+                                "4"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/orders",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "payment_method",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "transaction_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "amount",
+                                    "value": "1000",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "discount",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "discount_reason",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "total_payable",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_status",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/orders/4",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "orders",
+                                "4"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "users",
+            "item": [
+                {
+                    "name": "localhost:8000/api/users",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "full_name",
+                                    "value": "MyName",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/users",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "users"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Default",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "localhost:8000/api/users",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "8000",
+                                    "path": [
+                                        "api",
+                                        "users"
+                                    ]
+                                }
+                            },
+                            "code": 200,
+                            "_postman_previewlanguage": "Text",
+                            "header": [],
+                            "cookie": [],
+                            "body": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "localhost:8000/api/users",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "aw@a.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1234",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "full_name",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "3",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "4",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "5",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "6",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "town",
+                                    "value": "7",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "role",
+                                    "value": "8",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "otp",
+                                    "value": "9",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ach_details",
+                                    "value": "12",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "referral_balance",
+                                    "value": "13",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "true",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "15",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "verification_token",
+                                    "value": "16",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_reset_token",
+                                    "value": "17",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "local_id",
+                                    "value": "18",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/users",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "users"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/users",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "aw@a.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1234",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "full_name",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "3",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "4",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "5",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "6",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "town",
+                                    "value": "7",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "role",
+                                    "value": "8",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "otp",
+                                    "value": "9",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ach_details",
+                                    "value": "12",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "referral_balance",
+                                    "value": "13",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "true",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "15",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "verification_token",
+                                    "value": "16",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_reset_token",
+                                    "value": "17",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "local_id",
+                                    "value": "18",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/users/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "users",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/users",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "test@gmail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1234",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "full_name",
+                                    "value": "1234",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "3",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "4",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "5",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "6",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "town",
+                                    "value": "7",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "role",
+                                    "value": "8",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "otp",
+                                    "value": "9",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ach_details",
+                                    "value": "12",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "referral_balance",
+                                    "value": "13",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "true",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "15",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "verification_token",
+                                    "value": "16",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_reset_token",
+                                    "value": "17",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "local_id",
+                                    "value": "18",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/users/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "users",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/users",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "test@gmail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1234",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "full_name",
+                                    "value": "1234",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "3",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "4",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "5",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "6",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "town",
+                                    "value": "7",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "role",
+                                    "value": "8",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "otp",
+                                    "value": "9",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ach_details",
+                                    "value": "12",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "referral_balance",
+                                    "value": "13",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "true",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "15",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "verification_token",
+                                    "value": "16",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_reset_token",
+                                    "value": "17",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "local_id",
+                                    "value": "18",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/users/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "users",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "packages",
+            "item": [
+                {
+                    "name": "localhost:8000/api/packages",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/packages",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "packages"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/packages/1",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/packages/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "packages",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/packages/1",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/packages/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "packages",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/packages/1",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "features",
+                                    "value": "{\"num\":\"whatis\"}",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/packages/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "packages",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/packages",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "aaa",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "price",
+                                    "value": "500",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "features",
+                                    "value": "{\"num\":\"thisisfeatures\"}",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "1",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/packages",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "packages"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "transactions",
+            "item": [
+                {
+                    "name": "localhost:8000/api/transactions",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/transactions",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "transactions"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/transactions/1",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/transactions/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "transactions",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/transactions/1",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/transactions/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "transactions",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/transactions/1",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "order_id",
+                                    "value": "32433"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/transactions/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "transactions",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/transactions",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "type",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "order_id",
+                                    "value": "23",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "referrer_id",
+                                    "value": "4242",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "44",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/transactions",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "transactions"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "apikeys",
+            "item": [
+                {
+                    "name": "localhost:8000/api/apikeys",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/apikeys",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "apikeys"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/apikeys/1",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/apikeys/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "apikeys",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/apikeys/1",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/apikeys/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "apikeys",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/apikeys/1",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "restrict_to_ip_address",
+                                    "value": "192.168.1.1",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/apikeys/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "apikeys",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/apikeys",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "package_id",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "package_features",
+                                    "value": "{\"test\":\"test\"}"
+                                },
+                                {
+                                    "key": "key",
+                                    "value": "a"
+                                },
+                                {
+                                    "key": "restrict_to_ip_address",
+                                    "value": "127.0.0.1"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "2"
+                                },
+                                {
+                                    "key": "ip_requests_limit",
+                                    "value": "2321"
+                                },
+                                {
+                                    "key": "ip_requests_limit_seconds",
+                                    "value": "232"
+                                },
+                                {
+                                    "key": "expires",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "123"
+                                },
+                                {
+                                    "key": "ip_requests_interval_after_limit_seconds",
+                                    "value": "5555"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/apikeys",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "apikeys"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "clientpluginsettings",
+            "item": [
+                {
+                    "name": "localhost:8000/api/clientpluginsettings",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/clientpluginsettings",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "clientpluginsettings"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/clientpluginsettings/1",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/clientpluginsettings/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "clientpluginsettings",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/clientpluginsettings/1",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/clientpluginsettings/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "clientpluginsettings",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/clientpluginsettings/1",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "3333",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/clientpluginsettings/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "clientpluginsettings",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/clientpluginsettings",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "user_id",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "api_id",
+                                    "value": "4"
+                                },
+                                {
+                                    "key": "settings",
+                                    "value": "3"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "2"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/clientpluginsettings",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "clientpluginsettings"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "notifications",
+            "item": [
+                {
+                    "name": "localhost:8000/api/notifications",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/notifications",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notifications"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/notifications/1",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/notifications/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notifications",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/notifications/1",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/notifications/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notifications",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/notifications/1",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/notifications/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notifications",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/notifications",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "ddds",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "title",
+                                    "value": "sss",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "content",
+                                    "value": "fff",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "454",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/notifications",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notifications"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "email",
+            "item": [
+                {
+                    "name": "localhost:8000/api/email",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/email",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "email"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/email/1",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/email/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "email",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/email/1",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/email/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "email",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/email/1",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/email/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "email",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/email",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "aaa"
+                                },
+                                {
+                                    "key": "subject",
+                                    "value": "dd"
+                                },
+                                {
+                                    "key": "content",
+                                    "value": "ff"
+                                },
+                                {
+                                    "key": "body",
+                                    "value": "gggggg gg"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "2"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/email",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "email"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "adminsettings",
+            "item": [
+                {
+                    "name": "localhost:8000/api/adminsettings",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/adminsettings",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "adminsettings"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/adminsettings/1",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/adminsettings/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "adminsettings",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/adminsettings/1",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/adminsettings/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "adminsettings",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/adminsettings/1",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/adminsettings/1",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "adminsettings",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/adminsettings",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "site_name",
+                                    "value": "eeee",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "timezone",
+                                    "value": "2132",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "locale",
+                                    "value": "2313",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "maintenance_mode",
+                                    "value": "2323",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "maintenance_start",
+                                    "value": "2020-01-01",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "maintenance_end",
+                                    "value": "2022-01-01",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "maintenance_reason",
+                                    "value": "rrr",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ip_requests_limit",
+                                    "value": "55",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ip_requests_limit_seconds",
+                                    "value": "66",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ip_requests_interval_after_limit_seconds",
+                                    "value": "555",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "referral_percentage",
+                                    "value": "4",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "minimimum_referral_payout_amount",
+                                    "value": "3",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "discount_percentage_on_first_payment",
+                                    "value": "2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "branding_text",
+                                    "value": "fff",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "2",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/adminsettings",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "adminsettings"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "email-custom",
+            "item": [
+                {
+                    "name": "localhost:8000/api/email-custom/send",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/email-custom/send",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "email-custom",
+                                "send"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/email-custom/send-multiple",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost:8000/api/email-custom/send-multiple",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "email-custom",
+                                "send-multiple"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "notification-custom",
+            "item": [
+                {
+                    "name": "localhost:8000/api/notification-custom/send-multiple",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost:8000/api/notification-custom/send-multiple",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notification-custom",
+                                "send-multiple"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "localhost:8000/api/notification-custom/send",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {
+                            "accept": true
+                        }
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user_id\": 1,\n    \"content\":\"test\",\n    \"title\": \"tttt\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/notification-custom/send",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "notification-custom",
+                                "send"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
 }
