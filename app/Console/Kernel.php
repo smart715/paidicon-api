@@ -15,8 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('notify:expiring_api_keys')->dailyAt('8:00');
-        $schedule->command('terminate:expired_api_keys')->dailyAt('8:00');
+        // $schedule->command('notify:expiring_api_keys')->dailyAt('8:00');
+        // $schedule->command('terminate:expired_api_keys')->dailyAt('8:00');
     }
 
     /**
