@@ -7,6 +7,7 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
+
     /**
      * Define the application's command schedule.
      *
@@ -15,6 +16,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('laravel-log-keeper')->daily();
+
          $schedule->command('notify:expiring_api_keys')->dailyAt(env('CHECK_KEYS_AT', '8:00'));
          $schedule->command('terminate:expired_api_keys')->dailyAt(env('CHECK_KEYS_AT', '8:00'));
     }
