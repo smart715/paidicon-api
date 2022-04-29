@@ -3,32 +3,48 @@
 namespace App\Http\Middleware;
 
 use App\Facades\ApiRateLimiter;
+use App\Models\AdminSetting;
 use App\Models\ApiKey;
 use Closure;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ApiThrottleByKey
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse|JsonResponse
      */
     public function handle(Request $request, Closure $next)
     {
+        dd('ss');
         $apiKeyUuid = $request->header('x-api-key');
-        if(!$apiKeyUuid) {
+        if (!$apiKeyUuid) {
             return response()->json([], 403);
+        }
+
+        // TODO CHANGE TO REAL ADMIN CHECK
+        if ($apiKeyUuid === 'admin') {
+            return (new ApiThrottle)->handle($request, $next);
         }
 
         $apiKey = ApiKey::query()->where('uuid', $apiKeyUuid)->first();
         $ip = $request->ip();
 
-        if(!$apiKey || $apiKey->restrict_to_ip_address != $ip) {
+        if (!$apiKey || $apiKey->restrict_to_ip_address != $ip) {
             return response()->json([], 403);
+        }
+
+        $setting = AdminSetting::query()->first();
+        if ($setting && $setting->maintenance_mode) {
+            return response()->json(
+                ['message' => 'Site is in maintenance mode until ' . $setting->maintenance_end],
+                503
+            );
         }
 
         $tooManyAttempts = true;

@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        MathiasGrimm\LaravelLogKeeper\Providers\LaravelServiceProvider::class,
 
         /*
          * Application Service Providers...

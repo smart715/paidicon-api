@@ -20,7 +20,7 @@ class CreateAdminSettingsTable extends Migration
             $table->string('timezone');
             $table->string('locale');
             $table->string('maintenance_mode');
-            $table->date('maintenance_start');
+            $table->boolean('maintenance_start');
             $table->date('maintenance_end');
             $table->string('maintenance_reason');
             $table->double('ip_requests_limit');
