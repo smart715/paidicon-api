@@ -5,6 +5,7 @@ namespace App\Http;
 use App\Http\Middleware\ApiThrottle;
 use App\Http\Middleware\ApiThrottleByKey;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Tymon\JWTAuth\Http\Middleware\RefreshToken;
 
 class Kernel extends HttpKernel
 {

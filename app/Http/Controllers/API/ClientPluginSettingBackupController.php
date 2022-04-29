@@ -14,6 +14,8 @@ class ClientPluginSettingBackupController extends Controller
     {
         $this->middleware('api.throttleByKey')
             ->only(['store', 'show']);
+        $this->middleware('api.throttle')
+            ->except(['store', 'show']);
     }
 
     public function index()

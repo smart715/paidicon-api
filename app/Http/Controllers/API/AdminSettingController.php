@@ -12,8 +12,9 @@ class AdminSettingController extends Controller
 
     public function index()
     {
+
         $settings = AdminSetting::all()->toArray();
-        return array_reverse($settings);      
+        return array_reverse($settings);
     }
     public function store(Request $request)
     {

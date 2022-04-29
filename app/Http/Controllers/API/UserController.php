@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class UserController extends Controller
@@ -18,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all()->toArray();
-        return array_reverse($users);    
+        return array_reverse($users);
     }
 
     /**
@@ -40,7 +41,8 @@ class UserController extends Controller
     {
         $request['uuid'] = (string) Str::orderedUuid();
         $request['referral_code'] = (string) Str::orderedUuid();
-        
+        $request['password'] = Hash::make($request->get('password'));
+
         $product = new User($request->all());
         //return $request;
         $product->save();
@@ -75,14 +77,17 @@ class UserController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update($id,Request $request)
     {
-        
-        $user = User::find($id);
-        $user->update($request->all());
-        return response()->json('User updated!');
+        if(\Illuminate\Support\Facades\Gate::check('isSuperAdmin') || auth()->id() === $id) {
+            $user = User::find($id);
+            $request['password'] = Hash::make($request->get('password'));
+            $user->update($request->all());
+            return response()->json('User updated!');
+        }
+        return response()->json('Forbidden!',403);
     }
 
     /**
