@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\CustomNotificationController;
 use App\Http\Controllers\API\CustomEmailController;
 use App\Http\Controllers\API\EmailHistoryController;
@@ -26,25 +27,30 @@ use App\Http\Controllers\API\TransactionController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
-Route::middleware('api.throttle')->group(function() {
+Route::post('login', [AuthController::class, 'login']);
+Route::post('authorization', [AuthController::class, 'authorization']);
+
+Route::middleware(['api.throttle', 'auth:api'])->group(function() {
+    Route::get('logout', [AuthController::class, 'logout']);
+    Route::get('me', [AuthController::class, 'me']);
     Route::resource('users', UserController::class);
     Route::resource('orders', OrderController::class);
     Route::resource('packages', PackageController::class);
     Route::resource('transactions', TransactionController::class);
     Route::resource('apikeys', APIKeyController::class);
-    Route::resource('clientpluginsettings', ClientPluginSettingBackupController::class);
     Route::resource('notifications ', NotificationController::class);
     Route::resource('notification-templates', NotificationTemplateController::class);
     Route::resource('email-template', EmailTemplateController::class);
     Route::resource('email-history', EmailHistoryController::class);
-    Route::resource('adminsettings', AdminSettingController::class);
+    Route::resource('adminsettings', AdminSettingController::class)
+        ->middleware('can:isSuperAdmin');
 
     Route::post('notification-custom/send', [CustomNotificationController::class,'send']);
     Route::post('notification-custom/send-multiple', [CustomNotificationController::class,'sendMultiple']);
     Route::post('email-custom/send', [CustomEmailController::class, 'send']);
     Route::post('email-custom/send-multiple', [CustomEmailController::class, 'sendMultiple']);
 });
+
+Route::resource('clientpluginsettings', ClientPluginSettingBackupController::class);
+

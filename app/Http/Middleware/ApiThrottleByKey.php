@@ -8,6 +8,7 @@ use App\Models\ApiKey;
 use Closure;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Log;
 
 class ApiThrottleByKey
@@ -21,14 +22,14 @@ class ApiThrottleByKey
      */
     public function handle(Request $request, Closure $next)
     {
-        dd('ss');
         $apiKeyUuid = $request->header('x-api-key');
         if (!$apiKeyUuid) {
             return response()->json([], 403);
         }
 
         // TODO CHANGE TO REAL ADMIN CHECK
-        if ($apiKeyUuid === 'admin') {
+        $user = auth()->user();
+        if ($user && Gate::any(['isAdmin', 'isSuperAdmin'])) {
             return (new ApiThrottle)->handle($request, $next);
         }
 

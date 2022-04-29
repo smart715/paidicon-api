@@ -1,7 +1,7 @@
 {
     "info": {
-        "_postman_id": "30ef981c-5898-4939-aea1-c1596b6410a2",
-        "name": "Laravel9_api",
+        "_postman_id": "44c3f793-11b7-4bfe-9024-07db4342bc7c",
+        "name": "Laravel9_api Copy",
         "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
@@ -1698,10 +1698,106 @@
                         "header": [],
                         "body": {
                             "mode": "formdata",
-                            "formdata": []
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "test@mail.c",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1234",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "full_name",
+                                    "value": "trtrt",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "BigCorp2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "3",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "4",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "5",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "6",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "town",
+                                    "value": "7",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "role",
+                                    "value": "8",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "otp",
+                                    "value": "9",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ach_details",
+                                    "value": "12",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "referral_balance",
+                                    "value": "13",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "15",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "verification_token",
+                                    "value": "16",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_reset_token",
+                                    "value": "17",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "local_id",
+                                    "value": "18",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                }
+                            ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/email/1",
+                            "raw": "localhost:8000/api/email/1?email=test@mail.c&password=1234&full_name=trtrt&company=BigCorp2&address=3&country=4&phone=5&state=6&town=7&role=8&otp=9&ach_details=12&referral_balance=13&status=1&package_id=15&verification_token=16&password_reset_token=17&local_id=18&updated_by_user_id=1",
                             "host": [
                                 "localhost"
                             ],
@@ -1710,6 +1806,84 @@
                                 "api",
                                 "email",
                                 "1"
+                            ],
+                            "query": [
+                                {
+                                    "key": "email",
+                                    "value": "test@mail.c"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1234"
+                                },
+                                {
+                                    "key": "full_name",
+                                    "value": "trtrt"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "BigCorp2"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "3"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "4"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "5"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "6"
+                                },
+                                {
+                                    "key": "town",
+                                    "value": "7"
+                                },
+                                {
+                                    "key": "role",
+                                    "value": "8"
+                                },
+                                {
+                                    "key": "otp",
+                                    "value": "9"
+                                },
+                                {
+                                    "key": "ach_details",
+                                    "value": "12"
+                                },
+                                {
+                                    "key": "referral_balance",
+                                    "value": "13"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "15"
+                                },
+                                {
+                                    "key": "verification_token",
+                                    "value": "16"
+                                },
+                                {
+                                    "key": "password_reset_token",
+                                    "value": "17"
+                                },
+                                {
+                                    "key": "local_id",
+                                    "value": "18"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "1"
+                                }
                             ]
                         }
                     },
@@ -2079,6 +2253,191 @@
                     "response": []
                 }
             ]
+        },
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Sing in",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "test@mail.c",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1234",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "full_name",
+                                    "value": "trtrt",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "BigCorp2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "address",
+                                    "value": "3",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "country",
+                                    "value": "4",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "5",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "state",
+                                    "value": "6",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "town",
+                                    "value": "7",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "role",
+                                    "value": "8",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "otp",
+                                    "value": "9",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "ach_details",
+                                    "value": "12",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "referral_balance",
+                                    "value": "13",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "1",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "package_id",
+                                    "value": "15",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "verification_token",
+                                    "value": "16",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_reset_token",
+                                    "value": "17",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "local_id",
+                                    "value": "18",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "updated_by_user_id",
+                                    "value": "1",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/authorization",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "authorization"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "test@mail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1234",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "localhost:8000/api/login",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "me",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "localhost:8000/api/me",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8000",
+                            "path": [
+                                "api",
+                                "me"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "New Request",
+            "request": {
+                "method": "GET",
+                "header": []
+            },
+            "response": []
         }
     ]
 }
