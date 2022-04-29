@@ -4,9 +4,11 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Dotenv\Loader\Loader;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class AuthController extends Controller
@@ -28,9 +30,12 @@ class AuthController extends Controller
         $request['password'] = Hash::make( $request->get('password'));
         $request['role'] = 'client';
 
-        $product = new User($request->all());
+        $user = new User($request->all());
         //return $request;
-        $product->save();
+        $user->save();
+
+        Log::info('User #'. $user->uuid.' '. $user->full_name. ' registered');
+
         return response()->json('User created!');
     }
 
@@ -46,7 +51,7 @@ class AuthController extends Controller
         if (!$token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
-
+        Log::info('User'. $credentials['email']. ' logger in');
         return $this->respondWithToken($token);
     }
 
@@ -57,6 +62,8 @@ class AuthController extends Controller
      */
     public function me()
     {
+        $user = auth()->user();
+        Log::info('User'. $user->uuid. ' requested /me');
         return response()->json(auth()->user());
     }
 
@@ -67,6 +74,10 @@ class AuthController extends Controller
      */
     public function logout()
     {
+
+        $user = auth()->user();
+        Log::info('User'. $user->uuid. ' logged out');
+
         auth()->logout();
 
         return response()->json(['message' => 'Successfully logged out']);
@@ -79,6 +90,10 @@ class AuthController extends Controller
      */
     public function refresh()
     {
+
+        $user = auth()->user();
+        Log::info('User'. $user->uuid. ' refreshed his token');
+
         return $this->respondWithToken(auth()->refresh());
     }
 

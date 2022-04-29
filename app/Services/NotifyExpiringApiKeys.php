@@ -9,6 +9,7 @@ use App\Models\Notification;
 use App\Models\NotificationTemplate;
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
@@ -52,11 +53,17 @@ class NotifyExpiringApiKeys
 
     private function sendEmail(ApiKey $apiKey, User $user, EmailTemplate $template)
     {
+        $keyDaysLeft = Carbon::today()->diffInDays($apiKey->expires);
+
+        Log::info('Sending ['.$keyDaysLeft.'days left] notification expiration notification to '. $user->uuid);
         Mail::to($user->email)->send(new MailTemplate($template, $user, null, null, null, $apiKey));
     }
 
     private function sendNotification(ApiKey $apiKey, User $user, NotificationTemplate $template)
     {
+        $keyDaysLeft = Carbon::today()->diffInDays($apiKey->expires);
+
+        Log::info('Sending ['.$keyDaysLeft.'days left] notification expiration notification to '. $user->uuid);
         $messageParser = new MessageParser($user, null, null, null, $apiKey);
         Notification::create([
                                  'uuid' => (string)Str::orderedUuid(),

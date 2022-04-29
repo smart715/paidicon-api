@@ -9,6 +9,7 @@ use App\Services\UserFilteringService;
 use App\Models\Notification;
 use App\Services\MessageParser;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class CustomNotificationController
@@ -25,6 +26,9 @@ class CustomNotificationController
     {
         $request['uuid'] = (string) Str::orderedUuid();
         $notification = new Notification($request->all());
+        $authUser = auth()->user();
+        Log::info('User #'. $authUser->uuid.' '. $authUser->full_name. ' sent custom notification to '. $request->user_id);
+
         $notification->save();
 
         return response()->json(['message' => 'Success!']);
@@ -37,9 +41,13 @@ class CustomNotificationController
             return response()->json(['message' => 'Users not found, try to change the filters'], 404);
         }
 
+        $authUser = auth()->user();
 
         foreach ($users as $user) {
             $messageParser = new MessageParser($user);
+            Log::info('User #'. $authUser->uuid.' '. $authUser->full_name.
+                      ' sent custom notification to '. $user->user_id);
+
             Notification::create([
                 'uuid' => (string) Str::orderedUuid(),
                 'title' => $messageParser->parseContent($request->get('title')),

@@ -9,6 +9,7 @@ use App\Models\Notification;
 use App\Models\NotificationTemplate;
 use App\Models\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
@@ -32,6 +33,7 @@ class TerminateExpiredApiKeys
         foreach ($apiKeys as $apiKey) {
             $apiKey->status = 3;
             $apiKey->save();
+            Log::info('Disabling '.$apiKey->uuid.' key  of user#'. $user->uuid);
             $user = $apiKey->user;
             if ($emailTemplate) {
                 $this->sendEmail($apiKey, $user, $emailTemplate);
@@ -53,12 +55,14 @@ class TerminateExpiredApiKeys
 
     private function sendEmail(ApiKey $apiKey, User $user, EmailTemplate $template)
     {
+        Log::info('Sending key expired notification to '. $user->uuid);
         Mail::to($user->email)->send(new MailTemplate($template, $user, null, null, null, $apiKey));
     }
 
 
     private function sendNotification(ApiKey $apiKey, User $user, NotificationTemplate $template)
     {
+        Log::info('Sending key expired notification to '. $user->uuid);
         $messageParser = new MessageParser($user, null, null, null, $apiKey);
         Notification::create([
                                  'uuid' => (string)Str::orderedUuid(),

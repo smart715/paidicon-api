@@ -25,7 +25,10 @@ class CustomEmailController extends Controller
     public function send(SendCustomEmailRequest $request): \Illuminate\Http\JsonResponse
     {
         $user = User::query()->find($request->get('user_id'));
+        $authUser = auth()->user();
         Mail::to($user->email)->send(new CustomEmail($request));
+
+        Log::info('User #'. $authUser->uuid.' '. $authUser->full_name. ' sent custom email to '. $user->email);
 
         return response()->json(['message' => 'Success!']);
     }
@@ -49,8 +52,11 @@ class CustomEmailController extends Controller
                 'footer' => $request->get('footer'),
             ]
         );
+        $authUser = auth()->user();
 
         foreach ($users as $user) {
+            Log::info('User #'. $authUser->uuid.' '. $authUser->full_name. ' sent custom email to '. $user->email);
+
             Mail::to($user->email)->send(new MailTemplate($emailTemplate, $user));
         }
 

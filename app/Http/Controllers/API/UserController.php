@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class UserController extends Controller
@@ -19,6 +20,9 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all()->toArray();
+        $authUser = auth()->user();
+        Log::info('User #'. $authUser->uuid.' '. $authUser->full_name. ' Entered User index');
+
         return array_reverse($users);
     }
 
@@ -29,6 +33,7 @@ class UserController extends Controller
      */
     public function create()
     {
+
     }
 
     /**
@@ -43,9 +48,12 @@ class UserController extends Controller
         $request['referral_code'] = (string) Str::orderedUuid();
         $request['password'] = Hash::make($request->get('password'));
 
-        $product = new User($request->all());
+        $user = new User($request->all());
         //return $request;
-        $product->save();
+        $user->save();
+        $authUser = auth()->user();
+        Log::info('User #'. $authUser->uuid.' '. $authUser->full_name. ' Saved User #'. $user->uuid);
+
         return response()->json('User created!');
     }
 
@@ -58,6 +66,8 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
+        $authUser = auth()->user();
+        Log::info('User #'. $authUser->uuid.' '. $authUser->full_name. ' Have watched User #'. $user->uuid);
         return response()->json($user);
     }
 
@@ -85,6 +95,8 @@ class UserController extends Controller
             $user = User::find($id);
             $request['password'] = Hash::make($request->get('password'));
             $user->update($request->all());
+            $authUser = auth()->user();
+            Log::info('User #'. $authUser->uuid.' '. $authUser->full_name. ' Updated User #'. $user->uuid);
             return response()->json('User updated!');
         }
         return response()->json('Forbidden!',403);
@@ -100,6 +112,8 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
+        $authUser = auth()->user();
+        Log::info('User #'. $authUser->uuid.' '. $authUser->full_name. ' Deleted User #'. $user->uuid);
         return response()->json('User deleted!');
     }
 }
