@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9246e3e4558de8e1a3c97e019d699e0",
+    "content-hash": "59cdae11245f654442ef7766c0241b00",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3147,6 +3147,66 @@
             "time": "2022-04-17T14:12:26+00:00"
         },
         {
+            "name": "stripe/stripe-php",
+            "version": "v7.125.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "822c00aa380c10c2a3c55d105c5da72ad577b7c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/822c00aa380c10c2a3c55d105c5da72ad577b7c4",
+                "reference": "822c00aa380c10c2a3c55d105c5da72ad577b7c4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.5.0",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^5.7 || ^9.0",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v7.125.0"
+            },
+            "time": "2022-04-21T22:31:37+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.3.0",
             "source": {
@@ -5837,6 +5897,79 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "andreaselia/laravel-api-to-postman",
+            "version": "v1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andreaselia/laravel-api-to-postman.git",
+                "reference": "9f9e8231c90ad207377d396ccd890984116c3fd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andreaselia/laravel-api-to-postman/zipball/9f9e8231c90ad207377d396ccd890984116c3fd9",
+                "reference": "9f9e8231c90ad207377d396ccd890984116c3fd9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/config": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/console": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/routing": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.12"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AndreasElia\\PostmanGenerator\\PostmanGeneratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AndreasElia\\PostmanGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Elia",
+                    "email": "andreaselia@live.co.uk"
+                }
+            ],
+            "description": "Generate a Postman collection automatically from your Laravel API",
+            "keywords": [
+                "Postman",
+                "api",
+                "collection",
+                "generate",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/andreaselia/laravel-api-to-postman/issues",
+                "source": "https://github.com/andreaselia/laravel-api-to-postman/tree/v1.11.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/andreaselia",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/tomirons",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-21T15:10:54+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.4.1",

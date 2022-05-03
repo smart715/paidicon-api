@@ -31,12 +31,13 @@ class CreateUsersTable extends Migration
             $table->uuid('referral_code');
             $table->uuid('referer')->nullable();
             $table->json('ach_details');
-            $table->string('referral_balance');
+            $table->double('referral_balance');
             $table->boolean('status');
             $table->integer('package_id');
             $table->string('verification_token');
             $table->string('password_reset_token');
             $table->integer('local_id');
+            $table->string('stripe_account_id')->nullable();
             // $table->dateTime('created');
             // $table->dateTime('updated');
             $table->integer('updated_by_user_id');

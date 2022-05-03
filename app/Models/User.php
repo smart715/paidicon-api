@@ -41,7 +41,8 @@ class User extends Authenticatable implements JWTSubject
         'verification_token',
         'password_reset_token',
         'local_id',
-        'updated_by_user_id'
+        'updated_by_user_id',
+        'stripe_account_id'
     ];
 
     /**

@@ -39,6 +39,7 @@ class APIKeyController extends Controller
     {
         $apikey = ApiKey::find($id);
         $apikey->update($request->all());
+        $apikey->save();
         $user = auth()->user();
         Log::info('User #'. $user->uuid.' '. $user->full_name. ' Updated API KEY #'. $apikey->uuid);
         return response()->json('Api Key updated!');

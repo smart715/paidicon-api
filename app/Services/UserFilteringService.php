@@ -61,18 +61,18 @@ class UserFilteringService
                 });
                 break;
             case 'total_transactions_referral':
-                $query->whereHas('orders', function ($q) {
-                    $q->whereRelation('transaction', 'status', 1);
+                $query->whereHas('transactions', function ($q) {
+                    $q->where('type', 1);
                 },               $filter['symbol'], $filter['value']);
                 break;
             case 'total_transactions_refund':
                 $query->whereHas('orders', function ($q) {
-                    $q->whereRelation('transaction', 'status', 2);
+                    $q->whereRelation('type', 'status', 2);
                 },               $filter['symbol'], $filter['value']);
                 break;
             case 'total_transactions_order':
                 $query->whereHas('orders', function ($q) {
-                    $q->whereRelation('transaction', 'status', 3);
+                    $q->whereRelation('type', 'status', 3);
                 },               $filter['symbol'], $filter['value']);
                 break;
         }

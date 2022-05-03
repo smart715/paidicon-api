@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
 {
@@ -16,7 +17,6 @@ class Order extends Model
         'user_id',
         'package_id',
         'payment_method',
-        'transaction_id',
         'amount',
         'discount',
         'discount_reason',
@@ -32,9 +32,9 @@ class Order extends Model
         'uuid' => 'string'
     ];
 
-    public function transaction(): BelongsTo
+    public function transactions(): HasMany
     {
-        return $this->belongsTo(Transaction::class);
+        return $this->hasMany(Transaction::class);
     }
 
     public function package(): BelongsTo

@@ -37,9 +37,18 @@ Route::middleware(['api.throttle', 'auth:api'])->group(function() {
     Route::resource('users', UserController::class);
     Route::resource('orders', OrderController::class);
     Route::resource('packages', PackageController::class);
-    Route::resource('transactions', TransactionController::class);
+
+    Route::post('transactions/order', [TransactionController::class, 'order']);
+    Route::post('transactions/refund/{id}', [TransactionController::class, 'refund']);
+    Route::post('transactions/referral-payment', [TransactionController::class, 'requestReferralPayment']);
+    Route::post('transactions/referral-payment/{id}', [TransactionController::class, 'editReferralPaymentRequest']);
+
+    Route::get('transactions/', [TransactionController::class, 'index']);
+    Route::get('transactions/{id}', [TransactionController::class, 'show']);
+    Route::delete('transactions/{id}', [TransactionController::class, 'destroy']);
+
     Route::resource('apikeys', APIKeyController::class);
-    Route::resource('notifications ', NotificationController::class);
+    Route::resource('notifications', NotificationController::class);
     Route::resource('notification-templates', NotificationTemplateController::class);
     Route::resource('email-template', EmailTemplateController::class);
     Route::resource('email-history', EmailHistoryController::class);
