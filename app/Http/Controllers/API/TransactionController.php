@@ -97,7 +97,7 @@ class TransactionController extends Controller
                                         'uuid' => (string)Str::orderedUuid(),
                                         'stripe_id' => $refund['id'],
                                         'amount' => $amount,
-                                        'type' => 3,
+                                        'type' => 2,
                                         'user_id' => auth()->id(),
                                         'order_id' => $transaction->order_id,
                                         'status' => 3,
