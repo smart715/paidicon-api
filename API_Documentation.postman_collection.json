@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "6603ec04-be15-4aa1-b687-473ef93d64fa",
+        "_postman_id": "a012dcb1-95c7-41ad-be11-28024faf0883",
         "name": "Laravel9_api",
         "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -115,11 +115,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/authorization",
+                            "raw": "{{baseUrl}}:{{port}}/api/authorization",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "authorization"
@@ -138,7 +138,7 @@
                             "formdata": [
                                 {
                                     "key": "email",
-                                    "value": "test@mail.com",
+                                    "value": "test@mail.c",
                                     "type": "text"
                                 },
                                 {
@@ -149,11 +149,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/login",
+                            "raw": "{{baseUrl}}:{{port}}/api/login",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "login"
@@ -168,11 +168,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "localhost:8000/api/me",
+                            "raw": "{{baseUrl}}:{{port}}/api/me",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "me"
@@ -205,11 +205,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/users",
+                            "raw": "{{baseUrl}}:{{port}}/api/users",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "users"
@@ -223,11 +223,11 @@
                                 "method": "GET",
                                 "header": [],
                                 "url": {
-                                    "raw": "localhost:8000/api/users",
+                                    "raw": "localhost:{{port}}/api/users",
                                     "host": [
                                         "localhost"
                                     ],
-                                    "port": "8000",
+                                    "port": "{{port}}",
                                     "path": [
                                         "api",
                                         "users"
@@ -348,11 +348,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/users",
+                            "raw": "{{baseUrl}}:{{port}}/api/users",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "users"
@@ -465,11 +465,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/users/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/users/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "users",
@@ -585,11 +585,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/users/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/users/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "users",
@@ -700,11 +700,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/users/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/users/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "users",
@@ -732,11 +732,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/orders/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/orders/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "orders",
@@ -759,11 +759,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/orders/4",
+                            "raw": "{{baseUrl}}:{{port}}/api/orders/4",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "orders",
@@ -839,11 +839,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/orders",
+                            "raw": "{{baseUrl}}:{{port}}/api/orders",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "orders"
@@ -913,11 +913,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/orders/4",
+                            "raw": "{{baseUrl}}:{{port}}/api/orders/4",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "orders",
@@ -998,11 +998,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/orders/4",
+                            "raw": "{{baseUrl}}:{{port}}/api/orders/4",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "orders",
@@ -1030,11 +1030,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/packages",
+                            "raw": "{{baseUrl}}:{{port}}/api/packages",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "packages"
@@ -1056,11 +1056,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/packages/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/packages/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "packages",
@@ -1101,11 +1101,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/packages",
+                            "raw": "{{baseUrl}}:{{port}}/api/packages",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "packages"
@@ -1130,11 +1130,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/packages/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/packages/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "packages",
@@ -1154,11 +1154,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/packages/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/packages/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "packages",
@@ -1186,11 +1186,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/transactions",
+                            "raw": "{{baseUrl}}:{{port}}/api/transactions",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "transactions"
@@ -1225,11 +1225,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/transactions/referral-payment",
+                            "raw": "{{baseUrl}}:{{port}}/api/transactions/referral-payment",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "transactions",
@@ -1271,11 +1271,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/transactions/referral-payment/15",
+                            "raw": "{{baseUrl}}:{{port}}/api/transactions/referral-payment/15",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "transactions",
@@ -1301,11 +1301,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/transactions/refund/6",
+                            "raw": "{{baseUrl}}:{{port}}/api/transactions/refund/6",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "transactions",
@@ -1357,11 +1357,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/transactions",
+                            "raw": "{{baseUrl}}:{{port}}/api/transactions",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "transactions"
@@ -1388,11 +1388,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/apikeys",
+                            "raw": "{{baseUrl}}:{{port}}/api/apikeys",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "apikeys"
@@ -1414,11 +1414,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/apikeys/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/apikeys/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "apikeys",
@@ -1479,11 +1479,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/apikeys",
+                            "raw": "{{baseUrl}}:{{port}}/api/apikeys",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "apikeys"
@@ -1508,11 +1508,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/apikeys/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/apikeys/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "apikeys",
@@ -1532,11 +1532,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/apikeys/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/apikeys/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "apikeys",
@@ -1564,11 +1564,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/notifications",
+                            "raw": "{{baseUrl}}:{{port}}/api/notifications",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notifications"
@@ -1590,11 +1590,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/notifications/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/notifications/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notifications",
@@ -1614,11 +1614,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/notifications/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/notifications/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notifications",
@@ -1664,11 +1664,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/notifications/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/notifications/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notifications",
@@ -1709,11 +1709,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/notifications",
+                            "raw": "{{baseUrl}}:{{port}}/api/notifications",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notifications"
@@ -1733,11 +1733,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "localhost:8000/api/notification-templates",
+                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notification-templates"
@@ -1752,11 +1752,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "localhost:8000/api/notification-templates/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notification-templates",
@@ -1802,11 +1802,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/notification-templates",
+                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notification-templates"
@@ -1821,11 +1821,11 @@
                         "method": "PUT",
                         "header": [],
                         "url": {
-                            "raw": "localhost:8000/api/notification-templates/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notification-templates",
@@ -1841,11 +1841,11 @@
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                            "raw": "localhost:8000/api/notification-templates/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notification-templates",
@@ -1866,11 +1866,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "localhost:8000/api/email-template",
+                            "raw": "{{baseUrl}}:{{port}}/api/email-template",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "email-template"
@@ -1885,11 +1885,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "localhost:8000/api/email-template/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/email-template/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "email-template",
@@ -1940,11 +1940,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/email-template",
+                            "raw": "{{baseUrl}}:{{port}}/api/email-template",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "email-template"
@@ -1994,11 +1994,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/email-template/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/email-template/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "email-template",
@@ -2014,11 +2014,11 @@
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                            "raw": "localhost:8000/api/email-template/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/email-template/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "email-template",
@@ -2050,11 +2050,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/adminsettings",
+                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "adminsettings"
@@ -2076,11 +2076,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/adminsettings/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "adminsettings",
@@ -2176,11 +2176,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/adminsettings",
+                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "adminsettings"
@@ -2199,11 +2199,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/adminsettings/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "adminsettings",
@@ -2223,11 +2223,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/adminsettings/2",
+                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings/2",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "adminsettings",
@@ -2278,11 +2278,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/email-custom/send",
+                            "raw": "{{baseUrl}}:{{port}}/api/email-custom/send",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "email-custom",
@@ -2307,11 +2307,11 @@
                             }
                         },
                         "url": {
-                            "raw": "localhost:8000/api/email-custom/send-multiple",
+                            "raw": "{{baseUrl}}:{{port}}/api/email-custom/send-multiple",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "email-custom",
@@ -2352,11 +2352,11 @@
                             }
                         },
                         "url": {
-                            "raw": "localhost:8000/api/notification-custom/send",
+                            "raw": "{{baseUrl}}:{{port}}/api/notification-custom/send",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notification-custom",
@@ -2381,11 +2381,11 @@
                             }
                         },
                         "url": {
-                            "raw": "localhost:8000/api/notification-custom/send-multiple",
+                            "raw": "{{baseUrl}}:{{port}}/api/notification-custom/send-multiple",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "notification-custom",
@@ -2413,11 +2413,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/clientpluginsettings",
+                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "clientpluginsettings"
@@ -2445,11 +2445,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/clientpluginsettings/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "clientpluginsettings",
@@ -2492,11 +2492,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/clientpluginsettings",
+                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "clientpluginsettings"
@@ -2528,11 +2528,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "localhost:8000/api/clientpluginsettings/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "clientpluginsettings",
@@ -2552,11 +2552,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "localhost:8000/api/clientpluginsettings/1",
+                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings/1",
                             "host": [
-                                "localhost"
+                                "{{baseUrl}}"
                             ],
-                            "port": "8000",
+                            "port": "{{port}}",
                             "path": [
                                 "api",
                                 "clientpluginsettings",
@@ -2613,6 +2613,16 @@
         {
             "key": "apiKey",
             "value": "",
+            "type": "string"
+        },
+        {
+            "key": "baseUrl",
+            "value": "localhost",
+            "type": "string"
+        },
+        {
+            "key": "port",
+            "value": "8000",
             "type": "string"
         }
     ]
