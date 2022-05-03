@@ -22,16 +22,18 @@ class ApiThrottleByKey
      */
     public function handle(Request $request, Closure $next)
     {
-        $apiKeyUuid = $request->header('x-api-key');
-        if (!$apiKeyUuid) {
-            return response()->json([], 403);
-        }
 
-        // TODO CHANGE TO REAL ADMIN CHECK
         $user = auth()->user();
         if ($user && Gate::any(['isAdmin', 'isSuperAdmin'])) {
             return (new ApiThrottle)->handle($request, $next);
         }
+
+        $apiKeyUuid = $request->header('x-api-key');
+        if (!$apiKeyUuid) {
+            return response()->json(['message' => 'Api key is not present'], 403);
+        }
+
+
 
         $apiKey = ApiKey::query()->where('uuid', $apiKeyUuid)->first();
         $ip = $request->ip();

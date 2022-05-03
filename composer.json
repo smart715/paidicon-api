@@ -16,6 +16,7 @@
         "tymon/jwt-auth": "1.*"
     },
     "require-dev": {
+        "andreaselia/laravel-api-to-postman": "^1.11",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

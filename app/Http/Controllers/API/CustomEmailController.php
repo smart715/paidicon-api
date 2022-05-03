@@ -11,6 +11,7 @@ use App\Models\EmailTemplate;
 use App\Models\User;
 use App\Services\UserFilteringService;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class CustomEmailController extends Controller
 {

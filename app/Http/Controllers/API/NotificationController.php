@@ -15,9 +15,9 @@ class NotificationController extends Controller
     public function index()
     {
         $notifications = Notification::all()->toArray();
-        return array_reverse($notifications);
         $user = auth()->user();
         Log::info('User #'. $user->uuid.' '. $user->full_name. ' Entered Notification index');
+        return array_reverse($notifications);
     }
     public function store(Request $request)
     {
@@ -31,7 +31,7 @@ class NotificationController extends Controller
     }
     public function show($id)
     {
-        $notification = Notification::find($id);
+        $notification = Notification::findOrFail($id);
         $user = auth()->user();
         Log::info('User #'. $user->uuid.' '. $user->full_name. ' Have watched Notification #'. $notification->uuid);
         return response()->json($notification);

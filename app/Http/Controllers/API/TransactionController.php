@@ -86,7 +86,7 @@ class TransactionController extends Controller
             try {
                 $refund = $stripe->refunds->create([
                                                        'charge' => $transaction->stripe_id,
-                                                       'amount' => $request->get('amount', $transaction->amount) * 100
+                                                       'amount' => $amount * 100
                                                    ]);
             } catch (\Exception $exception) {
                 Log::error("Stripe Charge Exception: " . $exception->getMessage());
@@ -96,10 +96,10 @@ class TransactionController extends Controller
                 Transaction::create([
                                         'uuid' => (string)Str::orderedUuid(),
                                         'stripe_id' => $refund['id'],
-                                        'amount' => $request->get('amount'),
+                                        'amount' => $amount,
                                         'type' => 3,
                                         'user_id' => auth()->id(),
-                                        'order_id' => $transaction->id,
+                                        'order_id' => $transaction->order_id,
                                         'status' => 3,
                                         'referrer_id' => null
                                     ]
