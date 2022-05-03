@@ -12,6 +12,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "mathiasgrimm/laravel-log-keeper": "dev-master",
+        "stripe/stripe-php": "^7.125",
         "tymon/jwt-auth": "1.*"
     },
     "require-dev": {

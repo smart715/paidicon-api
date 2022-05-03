@@ -19,7 +19,6 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id');
             $table->integer('package_id');
             $table->string('payment_method');
-            $table->integer('transaction_id');
             $table->double('amount',8,2);
             $table->integer('discount');
             $table->string('discount_reason');

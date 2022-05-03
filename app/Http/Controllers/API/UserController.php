@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -91,7 +92,7 @@ class UserController extends Controller
      */
     public function update($id,Request $request)
     {
-        if(\Illuminate\Support\Facades\Gate::check('isSuperAdmin') || auth()->id() === $id) {
+        if(Gate::check('isSuperAdmin') || auth()->id() === $id) {
             $user = User::find($id);
             $request['password'] = Hash::make($request->get('password'));
             $user->update($request->all());
