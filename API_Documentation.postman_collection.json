@@ -115,13 +115,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/authorization",
+                            "raw": "{{baseUrl}}/authorization",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "authorization"
                             ]
                         }
@@ -149,13 +147,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/login",
+                            "raw": "{{baseUrl}}/login",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "login"
                             ]
                         }
@@ -168,13 +164,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/me",
+                            "raw": "{{baseUrl}}/me",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "me"
                             ]
                         }
@@ -205,13 +199,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/users",
+                            "raw": "{{baseUrl}}/users",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "users"
                             ]
                         }
@@ -227,9 +219,7 @@
                                     "host": [
                                         "localhost"
                                     ],
-                                    "port": "{{port}}",
                                     "path": [
-                                        "api",
                                         "users"
                                     ]
                                 }
@@ -348,13 +338,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/users",
+                            "raw": "{{baseUrl}}/users",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "users"
                             ]
                         }
@@ -465,13 +453,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/users/1",
+                            "raw": "{{baseUrl}}/users/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "users",
                                 "1"
                             ]
@@ -585,13 +571,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/users/1",
+                            "raw": "{{baseUrl}}/users/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "users",
                                 "1"
                             ]
@@ -700,13 +684,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/users/1",
+                            "raw": "{{baseUrl}}/users/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "users",
                                 "1"
                             ]
@@ -732,13 +714,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/orders/1",
+                            "raw": "{{baseUrl}}/orders/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "orders",
                                 "1"
                             ]
@@ -759,13 +739,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/orders/4",
+                            "raw": "{{baseUrl}}/orders/4",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "orders",
                                 "4"
                             ]
@@ -839,13 +817,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/orders",
+                            "raw": "{{baseUrl}}/orders",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "orders"
                             ]
                         }
@@ -913,13 +889,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/orders/4",
+                            "raw": "{{baseUrl}}/orders/4",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "orders",
                                 "4"
                             ]
@@ -998,13 +972,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/orders/4",
+                            "raw": "{{baseUrl}}/orders/4",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "orders",
                                 "4"
                             ]
@@ -1030,13 +1002,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/packages",
+                            "raw": "{{baseUrl}}/packages",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "packages"
                             ]
                         }
@@ -1056,13 +1026,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/packages/1",
+                            "raw": "{{baseUrl}}/packages/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "packages",
                                 "1"
                             ]
@@ -1101,13 +1069,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/packages",
+                            "raw": "{{baseUrl}}/packages",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "packages"
                             ]
                         }
@@ -1130,13 +1096,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/packages/1",
+                            "raw": "{{baseUrl}}/packages/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "packages",
                                 "1"
                             ]
@@ -1154,13 +1118,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/packages/1",
+                            "raw": "{{baseUrl}}/packages/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "packages",
                                 "1"
                             ]
@@ -1186,13 +1148,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/transactions",
+                            "raw": "{{baseUrl}}/transactions",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "transactions"
                             ]
                         }
@@ -1225,13 +1185,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/transactions/referral-payment",
+                            "raw": "{{baseUrl}}/transactions/referral-payment",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "transactions",
                                 "referral-payment"
                             ]
@@ -1271,13 +1229,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/transactions/referral-payment/15",
+                            "raw": "{{baseUrl}}/transactions/referral-payment/15",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "transactions",
                                 "referral-payment",
                                 "15"
@@ -1301,13 +1257,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/transactions/refund/6",
+                            "raw": "{{baseUrl}}/transactions/refund/6",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "transactions",
                                 "refund",
                                 "6"
@@ -1357,13 +1311,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/transactions",
+                            "raw": "{{baseUrl}}/transactions",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "transactions"
                             ]
                         }
@@ -1388,13 +1340,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/apikeys",
+                            "raw": "{{baseUrl}}/apikeys",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "apikeys"
                             ]
                         }
@@ -1414,13 +1364,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/apikeys/1",
+                            "raw": "{{baseUrl}}/apikeys/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "apikeys",
                                 "1"
                             ]
@@ -1479,13 +1427,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/apikeys",
+                            "raw": "{{baseUrl}}/apikeys",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "apikeys"
                             ]
                         }
@@ -1508,13 +1454,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/apikeys/1",
+                            "raw": "{{baseUrl}}/apikeys/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "apikeys",
                                 "1"
                             ]
@@ -1532,13 +1476,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/apikeys/1",
+                            "raw": "{{baseUrl}}/apikeys/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "apikeys",
                                 "1"
                             ]
@@ -1564,13 +1506,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notifications",
+                            "raw": "{{baseUrl}}/notifications",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notifications"
                             ]
                         }
@@ -1590,13 +1530,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notifications/1",
+                            "raw": "{{baseUrl}}/notifications/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notifications",
                                 "1"
                             ]
@@ -1614,13 +1552,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notifications/1",
+                            "raw": "{{baseUrl}}/notifications/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notifications",
                                 "1"
                             ]
@@ -1664,13 +1600,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notifications/1",
+                            "raw": "{{baseUrl}}/notifications/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notifications",
                                 "1"
                             ]
@@ -1709,13 +1643,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notifications",
+                            "raw": "{{baseUrl}}/notifications",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notifications"
                             ]
                         }
@@ -1733,13 +1665,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates",
+                            "raw": "{{baseUrl}}/notification-templates",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notification-templates"
                             ]
                         }
@@ -1752,13 +1682,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates/1",
+                            "raw": "{{baseUrl}}/notification-templates/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notification-templates",
                                 "1"
                             ]
@@ -1802,13 +1730,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates",
+                            "raw": "{{baseUrl}}/notification-templates",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notification-templates"
                             ]
                         }
@@ -1821,13 +1747,11 @@
                         "method": "PUT",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates/1",
+                            "raw": "{{baseUrl}}/notification-templates/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notification-templates",
                                 "1"
                             ]
@@ -1841,13 +1765,11 @@
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notification-templates/1",
+                            "raw": "{{baseUrl}}/notification-templates/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notification-templates",
                                 "1"
                             ]
@@ -1866,13 +1788,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/email-template",
+                            "raw": "{{baseUrl}}/email-template",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "email-template"
                             ]
                         }
@@ -1885,13 +1805,11 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/email-template/1",
+                            "raw": "{{baseUrl}}/email-template/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "email-template",
                                 "1"
                             ]
@@ -1940,13 +1858,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/email-template",
+                            "raw": "{{baseUrl}}/email-template",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "email-template"
                             ]
                         }
@@ -1994,13 +1910,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/email-template/1",
+                            "raw": "{{baseUrl}}/email-template/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "email-template",
                                 "1"
                             ]
@@ -2014,13 +1928,11 @@
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/email-template/1",
+                            "raw": "{{baseUrl}}/email-template/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "email-template",
                                 "1"
                             ]
@@ -2050,13 +1962,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings",
+                            "raw": "{{baseUrl}}/adminsettings",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "adminsettings"
                             ]
                         }
@@ -2076,13 +1986,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings/1",
+                            "raw": "{{baseUrl}}/adminsettings/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "adminsettings",
                                 "1"
                             ]
@@ -2176,13 +2084,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings",
+                            "raw": "{{baseUrl}}/adminsettings",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "adminsettings"
                             ]
                         }
@@ -2199,13 +2105,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings/1",
+                            "raw": "{{baseUrl}}/adminsettings/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "adminsettings",
                                 "1"
                             ]
@@ -2223,13 +2127,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/adminsettings/2",
+                            "raw": "{{baseUrl}}/adminsettings/2",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "adminsettings",
                                 "2"
                             ]
@@ -2278,13 +2180,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/email-custom/send",
+                            "raw": "{{baseUrl}}/email-custom/send",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "email-custom",
                                 "send"
                             ]
@@ -2307,13 +2207,11 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/email-custom/send-multiple",
+                            "raw": "{{baseUrl}}/email-custom/send-multiple",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "email-custom",
                                 "send-multiple"
                             ]
@@ -2352,13 +2250,11 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notification-custom/send",
+                            "raw": "{{baseUrl}}/notification-custom/send",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notification-custom",
                                 "send"
                             ]
@@ -2381,13 +2277,11 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/notification-custom/send-multiple",
+                            "raw": "{{baseUrl}}/notification-custom/send-multiple",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "notification-custom",
                                 "send-multiple"
                             ]
@@ -2413,13 +2307,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings",
+                            "raw": "{{baseUrl}}/clientpluginsettings",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "clientpluginsettings"
                             ]
                         }
@@ -2445,13 +2337,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings/1",
+                            "raw": "{{baseUrl}}/clientpluginsettings/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "clientpluginsettings",
                                 "1"
                             ]
@@ -2492,13 +2382,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings",
+                            "raw": "{{baseUrl}}/clientpluginsettings",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "clientpluginsettings"
                             ]
                         }
@@ -2528,13 +2416,11 @@
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings/1",
+                            "raw": "{{baseUrl}}/clientpluginsettings/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "clientpluginsettings",
                                 "1"
                             ]
@@ -2552,13 +2438,11 @@
                             "formdata": []
                         },
                         "url": {
-                            "raw": "{{baseUrl}}:{{port}}/api/clientpluginsettings/1",
+                            "raw": "{{baseUrl}}/clientpluginsettings/1",
                             "host": [
                                 "{{baseUrl}}"
                             ],
-                            "port": "{{port}}",
                             "path": [
-                                "api",
                                 "clientpluginsettings",
                                 "1"
                             ]
@@ -2617,12 +2501,7 @@
         },
         {
             "key": "baseUrl",
-            "value": "localhost",
-            "type": "string"
-        },
-        {
-            "key": "port",
-            "value": "8000",
+            "value": "localhost:8000/api",
             "type": "string"
         }
     ]
