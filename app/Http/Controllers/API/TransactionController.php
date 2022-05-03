@@ -93,7 +93,7 @@ class TransactionController extends Controller
                 return response()->json(['message' => 'Could not make a refund'], 500);
             }
             if ($refund['status'] == 'succeeded') {
-                Transaction::create([
+                $refundEntity = Transaction::create([
                                         'uuid' => (string)Str::orderedUuid(),
                                         'stripe_id' => $refund['id'],
                                         'amount' => $amount,
@@ -104,6 +104,7 @@ class TransactionController extends Controller
                                         'referrer_id' => null
                                     ]
                 );
+                $transaction->update(['refund_id' => $refundEntity->id]);
                 $user = auth()->user();
                 Log::info(
                     'User #' . $user->uuid . ' ' . $user->full_name . ' Have created Transaction #' . $transaction->uuid
@@ -173,6 +174,9 @@ class TransactionController extends Controller
                 return response()->json('Something went wrong', 500);
             }
         }
+        $transaction->update(['status' => 3]);
+        return response()->json(['message' => 'Transaction request approved successfully']);
+
         /*$stripeAccount = $stripe
             ->accounts->create([
                                    'business_type' => 'individual',
