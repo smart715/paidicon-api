@@ -19,11 +19,11 @@ class CreateAdminSettingsTable extends Migration
             $table->string('site_name');
             $table->string('timezone');
             $table->string('locale');
-            $table->string('maintenance_mode');
+            $table->boolean('maintenance_mode');
             $table->date('maintenance_start');
             $table->date('maintenance_end');
             $table->string('maintenance_reason');
-            $table->double('p_requests_limit');
+            $table->double('ip_requests_limit');
             $table->double('ip_requests_limit_seconds');
             $table->double('ip_requests_interval_after_limit_seconds');
             $table->string('referral_percentage');

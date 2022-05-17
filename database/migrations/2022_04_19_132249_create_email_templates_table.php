@@ -16,13 +16,15 @@ class CreateEmailTemplatesTable extends Migration
         Schema::create('email_templates', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('subject');
-            $table->text('content');
+            $table->string('header')->nullable();
+            $table->text('signature');
             $table->text('body');
+            $table->text('footer')->nullable();
             // $table->dateTime('created');
             // $table->dateTime('updated');
-            $table->integer('updated_by_user_id');
+            $table->integer('updated_by_user_id')->nullable();
             $table->timestamps();
         });
     }

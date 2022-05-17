@@ -16,12 +16,12 @@ class CreateNotificationsTable extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('name');
             $table->string('title');
             $table->text('content');
             // $table->dateTime('created');
             // $table->dateTime('updated');
-            $table->integer('updated_by_user_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->integer('updated_by_user_id')->nullable();
             $table->timestamps();
         });
     }

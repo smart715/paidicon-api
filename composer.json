@@ -10,9 +10,13 @@
         "guzzlehttp/guzzle": "^7.4",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "mathiasgrimm/laravel-log-keeper": "dev-master",
+        "stripe/stripe-php": "^7.125",
+        "tymon/jwt-auth": "1.*"
     },
     "require-dev": {
+        "andreaselia/laravel-api-to-postman": "^1.11",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
@@ -58,5 +62,12 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/666ghost/laravel-log-keeper"
+        }
+    ]
 }

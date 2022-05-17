@@ -2,24 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Email extends Model
+class NotificationTemplate extends Model
 {
-    use HasFactory;
-    protected $table="email_templates";
+
     protected $fillable = [
         'uuid',
         'name',
-        'subject',
+        'title',
         'content',
-        'body',
         'updated_by_user_id'
-
     ];
 
     protected $hidden = [];
 
     protected $casts = [];
+
 }

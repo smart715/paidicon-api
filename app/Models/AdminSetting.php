@@ -17,7 +17,7 @@ class AdminSetting extends Model
         'maintenance_start',
         'maintenance_end',
         'maintenance_reason',
-        'p_requests_limit',
+        'ip_requests_limit',
         'ip_requests_limit_seconds',
         'ip_requests_interval_after_limit_seconds',
         'referral_percentage',
