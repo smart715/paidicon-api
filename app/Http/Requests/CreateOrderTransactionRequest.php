@@ -24,10 +24,11 @@ class CreateOrderTransactionRequest  extends FormRequest
     public function rules()
     {
         return [
-            'card_number' => 'required|numeric',
+            'type' => 'required|string',
+/*            'card_number' => 'required|numeric',
             'exp_month' => 'required|numeric',
             'exp_year' => 'required|numeric',
-            'cvc' => 'required',
+            'cvc' => 'required',*/
             'amount' => 'required|numeric',
             'order_id' => 'required|numeric|exists:orders,id',
             'referral_code' => 'nullable|exists:users,referral_code'
