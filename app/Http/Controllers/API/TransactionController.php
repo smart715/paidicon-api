@@ -26,33 +26,25 @@ class TransactionController extends Controller
         if ($request->get('amount') <= $order->amount) {
             if ($request->get('type') === 'ACH') {
                 $customer = $stripe->customers->create();
-                $session = $stripe->checkout->sessions->create(
+                $paymentIntent = $stripe->paymentIntents->create(
                     [
-                        'mode' => 'payment',
+                        'amount' => $request->get('amount') * 100,
+                        'currency' => 'usd',
+                        'setup_future_usage' => 'off_session',
                         'customer' => $customer->id,
-                        'payment_method_types' => ['card', 'us_bank_account'],
+                        'payment_method_types' => ['us_bank_account'],
                         'payment_method_options' => [
                             'us_bank_account' => [
-                                'financial_connections' => ['permissions' => ['payment_method']],
-                            ],
-                        ],
-                        'line_items' => [
-                            [
-                                'price_data' => [
-                                    'currency' => 'usd',
-                                    'unit_amount' => $request->get('amount') * 100,
-                                    'product_data' => ['name' => 'Order#' . $order->id],
+                                'financial_connections' => [
+                                    'permissions' => ['payment_method', 'balances'],
                                 ],
-                                'quantity' => 1,
                             ],
                         ],
-                        'success_url' => env('FRONTEND_ACH_SUCCESS') . '?id=' . $customer->id,
-                        'cancel_url' => env('FRONTEND_ACH_CANCEL') . '?id='. $customer->id,
                     ]
                 );
                 $transaction = Transaction::create([
                                                        'uuid' => (string)Str::orderedUuid(),
-                                                       'stripe_id' => $customer->id,
+                                                       'stripe_id' => $paymentIntent->id,
                                                        'amount' => $request->get('amount'),
                                                        'type' => 3,
                                                        'user_id' => auth()->id(),
@@ -68,7 +60,7 @@ class TransactionController extends Controller
                                                    ]
                 );
 
-                return response()->json(['url' => $session->url]);
+                return response()->json(['client_secret' => $paymentIntent->client_secret]);
             }
             try {
                 $token = $stripe->tokens->create([

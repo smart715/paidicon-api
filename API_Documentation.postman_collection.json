@@ -10,7 +10,7 @@
             "name": "Auth",
             "item": [
                 {
-                    "name": "Sing in",
+                    "name": "Registration",
                     "request": {
                         "method": "POST",
                         "header": [],
