@@ -21,8 +21,8 @@ class ApiKey extends Model
         'ip_requests_limit_seconds',
         'ip_requests_interval_after_limit_seconds',
         'expires',
-        'updated_by_user_id'
-
+        'updated_by_user_id',
+        'previous_ip_address'
     ];
 
     protected $hidden = [];

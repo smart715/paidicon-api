@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateUserRequest;
 use App\Models\User;
 use Dotenv\Loader\Loader;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -23,7 +24,7 @@ class AuthController extends Controller
         $this->middleware('auth:api', ['except' => ['authorization','login']]);
     }
 
-    public function authorization(Request $request): \Illuminate\Http\JsonResponse
+    public function authorization(CreateUserRequest $request): \Illuminate\Http\JsonResponse
     {
         $request['uuid'] = (string)Str::orderedUuid();
         $request['referral_code'] = (string)Str::orderedUuid();
