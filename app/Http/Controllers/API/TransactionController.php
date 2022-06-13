@@ -24,6 +24,44 @@ class TransactionController extends Controller
 
         $order = Order::find($request->get('order_id'));
         if ($request->get('amount') <= $order->amount) {
+            if ($request->get('type') === 'ACH') {
+                $customer = $stripe->customers->create();
+                $paymentIntent = $stripe->paymentIntents->create(
+                    [
+                        'amount' => $request->get('amount') * 100,
+                        'currency' => 'usd',
+                        'setup_future_usage' => 'off_session',
+                        'customer' => $customer->id,
+                        'payment_method_types' => ['us_bank_account'],
+                        'payment_method_options' => [
+                            'us_bank_account' => [
+                                'financial_connections' => [
+                                    'permissions' => ['payment_method', 'balances'],
+                                ],
+                            ],
+                        ],
+                    ]
+                );
+                $transaction = Transaction::create([
+                                                       'uuid' => (string)Str::orderedUuid(),
+                                                       'stripe_id' => $paymentIntent->id,
+                                                       'amount' => $request->get('amount'),
+                                                       'type' => 3,
+                                                       'user_id' => auth()->id(),
+                                                       'order_id' => $order->id,
+                                                       'status' => 1,
+                                                       'bank_account' => 'bank_account',
+                                                       'referrer_id' => $request->has('referral_code') ?
+                                                           User::query()->find(
+                                                               'referral_code',
+                                                               $request->get('referral_code')
+                                                           ) :
+                                                           null
+                                                   ]
+                );
+
+                return response()->json(['client_secret' => $paymentIntent->client_secret]);
+            }
             try {
                 $token = $stripe->tokens->create([
                                                      'card' => [
@@ -94,15 +132,15 @@ class TransactionController extends Controller
             }
             if ($refund['status'] == 'succeeded') {
                 $refundEntity = Transaction::create([
-                                        'uuid' => (string)Str::orderedUuid(),
-                                        'stripe_id' => $refund['id'],
-                                        'amount' => $amount,
-                                        'type' => 2,
-                                        'user_id' => auth()->id(),
-                                        'order_id' => $transaction->order_id,
-                                        'status' => 3,
-                                        'referrer_id' => null
-                                    ]
+                                                        'uuid' => (string)Str::orderedUuid(),
+                                                        'stripe_id' => $refund['id'],
+                                                        'amount' => $amount,
+                                                        'type' => 2,
+                                                        'user_id' => auth()->id(),
+                                                        'order_id' => $transaction->order_id,
+                                                        'status' => 3,
+                                                        'referrer_id' => null
+                                                    ]
                 );
                 $transaction->update(['refund_id' => $refundEntity->id]);
                 $user = auth()->user();
@@ -132,7 +170,6 @@ class TransactionController extends Controller
                                                    'order_id' => null,
                                                    'status' => 1,
                                                    'referrer_id' => null,
-                                                   'bank_account' => $request->get('bank_account'),
                                                    'card' => $request->get('card')
                                                ]
             );
@@ -176,7 +213,6 @@ class TransactionController extends Controller
         }
         $transaction->update(['status' => 3]);
         return response()->json(['message' => 'Transaction request approved successfully']);
-
         /*$stripeAccount = $stripe
             ->accounts->create([
                                    'business_type' => 'individual',
@@ -264,6 +300,15 @@ class TransactionController extends Controller
         $user = auth()->user();
         Log::info('User #' . $user->uuid . ' ' . $user->full_name . ' Deleted Transaction #' . $transaction->uuid);
         return response()->json('Transaction deleted!');
+    }
+
+    public function updateACHPayment(Request $request)
+    {
+        $transaction = Transaction::where('stripe_id', $request->get('id'))
+            ->where('bank_account', 'bank_account')->firstOrFail();
+        $transaction->status = $request->status;
+        $transaction->save();
+        return response()->json(['message' => 'Status updated']);
     }
 
 }

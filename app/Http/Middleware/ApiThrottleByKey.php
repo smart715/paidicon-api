@@ -30,16 +30,15 @@ class ApiThrottleByKey
 
         $apiKeyUuid = $request->header('x-api-key');
         if (!$apiKeyUuid) {
-            return response()->json(['message' => 'Api key is not present'], 403);
+            return response()->json(['message' => 'Api key is not present'], 404);
         }
 
 
 
         $apiKey = ApiKey::query()->where('uuid', $apiKeyUuid)->first();
         $ip = $request->ip();
-
-        if (!$apiKey || $apiKey->restrict_to_ip_address != $ip) {
-            return response()->json([], 403);
+        if (!$apiKey || gethostbyname($apiKey->restrict_to_ip_address) != $ip) {
+            return response()->json(['message' => 'Your IP is unknown for this API key'], 403);
         }
 
         $setting = AdminSetting::query()->first();

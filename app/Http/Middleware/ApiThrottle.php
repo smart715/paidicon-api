@@ -17,6 +17,14 @@ class ApiThrottle
         'clientpluginsettings.show',
         'clientpluginsettings.store'
     ];
+    protected $limit;
+    protected $limitSeconds;
+
+    public function __construct($limit = null, $limitSeconds = null)
+    {
+        $this->limit = $limit;
+        $this->limitSeconds = $limitSeconds;
+    }
 
     /**
      * Handle an incoming request.
@@ -28,6 +36,11 @@ class ApiThrottle
     public function handle(Request $request, Closure $next)
     {
         $settings = AdminSetting::query()->first();
+        if(!$this->limit || !$this->limitSeconds) {
+            $this->limit = $settings->ip_requests_limit;
+            $this->limitSeconds = $settings->ip_requests_limit_seconds;
+        }
+
         if (!$settings || in_array(Route::currentRouteName(), $this->ignoreRoutes)) {
             return $next($request);
         }
@@ -35,11 +48,11 @@ class ApiThrottle
         $tooManyAttempts = true;
         ApiRateLimiter::attempt(
             'api_throttle',
-            $settings->ip_requests_limit,
+            $this->limit,
             function () use (&$tooManyAttempts) {
                 $tooManyAttempts = false;
             },
-            $settings->ip_requests_limit_seconds,
+            $this->limitSeconds,
             $settings->ip_requests_interval_after_limit_seconds
         );
 

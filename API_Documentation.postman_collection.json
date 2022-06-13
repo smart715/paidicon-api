@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "a012dcb1-95c7-41ad-be11-28024faf0883",
+        "_postman_id": "4564dca2-0ad2-4616-adf8-3a17872c8186",
         "name": "Laravel9_api",
         "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -10,7 +10,7 @@
             "name": "Auth",
             "item": [
                 {
-                    "name": "Sing in",
+                    "name": "Registration",
                     "request": {
                         "method": "POST",
                         "header": [],
@@ -24,7 +24,7 @@
                                 },
                                 {
                                     "key": "password",
-                                    "value": "1234",
+                                    "value": "password",
                                     "type": "text"
                                 },
                                 {
@@ -110,7 +110,8 @@
                                 {
                                     "key": "updated_by_user_id",
                                     "value": "1",
-                                    "type": "text"
+                                    "type": "text",
+                                    "disabled": true
                                 }
                             ]
                         },
@@ -215,7 +216,7 @@
                                 "method": "GET",
                                 "header": [],
                                 "url": {
-                                    "raw": "localhost:{{port}}/api/users",
+                                    "raw": "localhost/users",
                                     "host": [
                                         "localhost"
                                     ],
@@ -1218,7 +1219,7 @@
                             "formdata": [
                                 {
                                     "key": "approve",
-                                    "value": "true",
+                                    "value": "0",
                                     "type": "text"
                                 },
                                 {
@@ -1284,39 +1285,78 @@
                                     "type": "text"
                                 },
                                 {
-                                    "key": "type",
-                                    "value": "2",
+                                    "key": "card_number",
+                                    "value": "4242424242424242",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "exp_month",
+                                    "value": "8",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "exp_year",
+                                    "value": "2023",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cvc",
+                                    "value": "123",
                                     "type": "text"
                                 },
                                 {
                                     "key": "order_id",
-                                    "value": "23",
+                                    "value": "5",
                                     "type": "text"
                                 },
                                 {
-                                    "key": "referrer_id",
-                                    "value": "4242",
-                                    "type": "text"
-                                },
-                                {
-                                    "key": "status",
-                                    "value": "2",
-                                    "type": "text"
-                                },
-                                {
-                                    "key": "updated_by_user_id",
-                                    "value": "44",
+                                    "key": "amount",
+                                    "value": "45",
                                     "type": "text"
                                 }
                             ]
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/transactions",
+                            "raw": "{{baseUrl}}/transactions/order",
                             "host": [
                                 "{{baseUrl}}"
                             ],
                             "path": [
-                                "transactions"
+                                "transactions",
+                                "order"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "UpdateACHStatus",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "id",
+                                    "value": "cus_LpLRVTM3mnIk1z",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "3",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/transactions/update-ach",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "transactions",
+                                "update-ach"
                             ]
                         }
                     },
@@ -1485,6 +1525,52 @@
                                 "1"
                             ]
                         }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Info",
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [
+                                    ""
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-api-key",
+                                "value": "{{apiKey}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/apikey/info",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "apikey",
+                                "info"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Change IP",
+                    "request": {
+                        "method": "GET",
+                        "header": []
                     },
                     "response": []
                 }

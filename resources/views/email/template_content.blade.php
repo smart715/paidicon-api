@@ -4,15 +4,14 @@
             <img class="logo" src="{{asset('images/paidicon.png')}}">
         </div>
         <header>
-            {!! $request->subject !!}
+            {!! $header!!}
         </header>
         <div class="email-body">
-            {!! $request->mail_body !!}
-            {!! $request->signature !!}
+            {!! $body!!}
         </div>
         <footer class="footer">
             <div class="button"><a href="{{env('FRONTEND_URL')}}" style="text-decoration: none"><span class="button-text">Visit Now</span></a></div>
-            {!! $request->footer !!}
+            {!!$footer!!}
         </footer>
     </div>
 </div>

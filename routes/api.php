@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\API\APIKeyClientController;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\CustomNotificationController;
 use App\Http\Controllers\API\CustomEmailController;
 use App\Http\Controllers\API\EmailHistoryController;
 use App\Http\Controllers\API\NotificationTemplateController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\OrderController;
@@ -42,6 +42,7 @@ Route::middleware(['api.throttle', 'auth:api'])->group(function() {
     Route::post('transactions/refund/{id}', [TransactionController::class, 'refund']);
     Route::post('transactions/referral-payment', [TransactionController::class, 'requestReferralPayment']);
     Route::post('transactions/referral-payment/{id}', [TransactionController::class, 'editReferralPaymentRequest']);
+    Route::post('transactions/update-ach', [TransactionController::class, 'updateACHPayment']);
 
     Route::get('transactions/', [TransactionController::class, 'index']);
     Route::get('transactions/{id}', [TransactionController::class, 'show']);
@@ -62,4 +63,7 @@ Route::middleware(['api.throttle', 'auth:api'])->group(function() {
 });
 
 Route::resource('clientpluginsettings', ClientPluginSettingBackupController::class);
+
+Route::get('/apikey/info', [APIKeyClientController::class, 'getKeyInfo']);
+Route::put('/apikey/change-ip', [APIKeyClientController::class, 'changeIP']);
 

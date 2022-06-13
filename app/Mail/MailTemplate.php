@@ -43,7 +43,13 @@ class MailTemplate extends Mailable
 
     public function getHtmlLayout(): string
     {
-        return '<header>' . $this->emailTemplate->header . '</header>' . $this->emailTemplate->body . $this->emailTemplate->signature . '<footer>' . $this->emailTemplate->footer . '</footer>';
+        return view('email.template_content',
+                    [
+                        'header' => $this->emailTemplate->header,
+                        'body' => $this->emailTemplate->body . $this->emailTemplate->signature,
+                        'footer' => $this->emailTemplate->footer
+                    ]
+        )->render();
     }
 
     public function build()
