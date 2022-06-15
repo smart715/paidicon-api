@@ -1569,8 +1569,36 @@
                 {
                     "name": "Change IP",
                     "request": {
-                        "method": "GET",
-                        "header": []
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "x-api-key",
+                                "value": "{{apiKey}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"previous_ip\": \"172.28.0.2\",\n    \"new_ip\": \"172.28.0.1\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/apikey/change-ip",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "apikey",
+                                "change-ip"
+                            ]
+                        }
                     },
                     "response": []
                 }
