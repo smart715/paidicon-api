@@ -43,6 +43,7 @@ Route::middleware(['api.throttle', 'auth:api'])->group(function() {
     Route::post('transactions/referral-payment', [TransactionController::class, 'requestReferralPayment']);
     Route::post('transactions/referral-payment/{id}', [TransactionController::class, 'editReferralPaymentRequest']);
     Route::post('transactions/update-ach', [TransactionController::class, 'updateACHPayment']);
+    Route::post('transactions/update-credit', [TransactionController::class, 'updateCreditPayment']);
 
     Route::get('transactions/', [TransactionController::class, 'index']);
     Route::get('transactions/{id}', [TransactionController::class, 'show']);

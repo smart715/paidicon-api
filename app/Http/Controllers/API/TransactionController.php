@@ -42,35 +42,71 @@ class TransactionController extends Controller
                         ],
                     ]
                 );
-                $transaction = Transaction::create([
-                                                       'uuid' => (string)Str::orderedUuid(),
-                                                       'stripe_id' => $paymentIntent->id,
-                                                       'amount' => $request->get('amount'),
-                                                       'type' => 3,
-                                                       'user_id' => auth()->id(),
-                                                       'order_id' => $order->id,
-                                                       'status' => 1,
-                                                       'bank_account' => 'bank_account',
-                                                       'referrer_id' => $request->has('referral_code') ?
-                                                           User::query()->find(
-                                                               'referral_code',
-                                                               $request->get('referral_code')
-                                                           ) :
-                                                           null
-                                                   ]
+                $transaction = Transaction::create(
+                    [
+                        'uuid' => (string)Str::orderedUuid(),
+                        'stripe_id' => $paymentIntent->id,
+                        'amount' => $request->get('amount'),
+                        'type' => 3,
+                        'user_id' => auth()->id(),
+                        'order_id' => $order->id,
+                        'status' => 1,
+                        'bank_account' => 'bank_account',
+                        'referrer_id' => $request->has('referral_code') ?
+                            User::query()->find(
+                                'referral_code',
+                                $request->get('referral_code')
+                            ) :
+                            null
+                    ]
                 );
 
+                return response()->json(['client_secret' => $paymentIntent->client_secret]);
+            } else if ($request->get('type') === 'card') {
+                    
+                $customer = $stripe->customers->create();
+                $paymentIntent = $stripe->paymentIntents->create(
+                    [
+                        'amount' => $request->get('amount') * 100,
+                        'currency' => 'usd',
+                        'setup_future_usage' => 'off_session',
+                        'customer' => $customer->id,
+                        'payment_method_types' => ['card'],
+                        'payment_method_options' => [
+                            'card' => [
+                                "request_three_d_secure"=> "automatic"
+                            ],
+                        ],
+                    ]
+                );
+                $transaction = Transaction::create(
+                    [
+                        'uuid' => (string)Str::orderedUuid(),
+                        'stripe_id' => $paymentIntent->id,
+                        'amount' => $request->get('amount'),
+                        'type' => 3,
+                        'user_id' => auth()->id(),
+                        'order_id' => $order->id,
+                        'status' => 1,
+                        'referrer_id' => $request->has('referral_code') ?
+                            User::query()->find(
+                                'referral_code',
+                                $request->get('referral_code')
+                            ) :
+                            null
+                    ]
+                );
                 return response()->json(['client_secret' => $paymentIntent->client_secret]);
             }
             try {
                 $token = $stripe->tokens->create([
-                                                     'card' => [
-                                                         'number' => $request->get('card_number'),
-                                                         'exp_month' => $request->get('exp_month'),
-                                                         'exp_year' => $request->get('exp_year'),
-                                                         'cvc' => $request->get('cvc'),
-                                                     ]
-                                                 ]);
+                    'card' => [
+                        'number' => $request->get('card_number'),
+                        'exp_month' => $request->get('exp_month'),
+                        'exp_year' => $request->get('exp_year'),
+                        'cvc' => $request->get('cvc'),
+                    ]
+                ]);
 
                 if (!isset($token['id'])) {
                     Log::warning('failed to create token');
@@ -78,31 +114,32 @@ class TransactionController extends Controller
                 }
 
                 $charge = $stripe->charges->create([
-                                                       'source' => $token['id'],
-                                                       'currency' => 'USD',
-                                                       'amount' => $request->get('amount') * 100,
-                                                       'description' => 'Charge order #' . $order->uuid,
-                                                   ]);
+                    'source' => $token['id'],
+                    'currency' => 'USD',
+                    'amount' => $request->get('amount') * 100,
+                    'description' => 'Charge order #' . $order->uuid,
+                ]);
             } catch (\Exception $exception) {
                 Log::error("Stripe Charge Exception: " . $exception->getMessage());
                 return response()->json(['message' => 'Could not make a charge'], 500);
             }
             if ($charge['status'] == 'succeeded') {
-                $transaction = Transaction::create([
-                                                       'uuid' => (string)Str::orderedUuid(),
-                                                       'stripe_id' => $charge['id'],
-                                                       'amount' => $request->get('amount'),
-                                                       'type' => 3,
-                                                       'user_id' => auth()->id(),
-                                                       'order_id' => $order->id,
-                                                       'status' => 3,
-                                                       'referrer_id' => $request->has('referral_code') ?
-                                                           User::query()->find(
-                                                               'referral_code',
-                                                               $request->get('referral_code')
-                                                           ) :
-                                                           null
-                                                   ]
+                $transaction = Transaction::create(
+                    [
+                        'uuid' => (string)Str::orderedUuid(),
+                        'stripe_id' => $charge['id'],
+                        'amount' => $request->get('amount'),
+                        'type' => 3,
+                        'user_id' => auth()->id(),
+                        'order_id' => $order->id,
+                        'status' => 3,
+                        'referrer_id' => $request->has('referral_code') ?
+                            User::query()->find(
+                                'referral_code',
+                                $request->get('referral_code')
+                            ) :
+                            null
+                    ]
                 );
                 $user = auth()->user();
                 Log::info(
@@ -123,24 +160,25 @@ class TransactionController extends Controller
         if ($amount <= $transaction->amount) {
             try {
                 $refund = $stripe->refunds->create([
-                                                       'charge' => $transaction->stripe_id,
-                                                       'amount' => $amount * 100
-                                                   ]);
+                    'charge' => $transaction->stripe_id,
+                    'amount' => $amount * 100
+                ]);
             } catch (\Exception $exception) {
                 Log::error("Stripe Charge Exception: " . $exception->getMessage());
                 return response()->json(['message' => 'Could not make a refund'], 500);
             }
             if ($refund['status'] == 'succeeded') {
-                $refundEntity = Transaction::create([
-                                                        'uuid' => (string)Str::orderedUuid(),
-                                                        'stripe_id' => $refund['id'],
-                                                        'amount' => $amount,
-                                                        'type' => 2,
-                                                        'user_id' => auth()->id(),
-                                                        'order_id' => $transaction->order_id,
-                                                        'status' => 3,
-                                                        'referrer_id' => null
-                                                    ]
+                $refundEntity = Transaction::create(
+                    [
+                        'uuid' => (string)Str::orderedUuid(),
+                        'stripe_id' => $refund['id'],
+                        'amount' => $amount,
+                        'type' => 2,
+                        'user_id' => auth()->id(),
+                        'order_id' => $transaction->order_id,
+                        'status' => 3,
+                        'referrer_id' => null
+                    ]
                 );
                 $transaction->update(['refund_id' => $refundEntity->id]);
                 $user = auth()->user();
@@ -159,19 +197,22 @@ class TransactionController extends Controller
         $user = auth()->user();
         $amount = $request->get('amount', $user->referral_balance);
         $settings = AdminSetting::first();
-        if ($settings && $amount >= $settings->minimimum_referral_payout_amount
-            && $user->referral_balance >= $amount) {
-            $transaction = Transaction::create([
-                                                   'uuid' => (string)Str::orderedUuid(),
-                                                   'stripe_id' => null,
-                                                   'amount' => $amount,
-                                                   'type' => 1,
-                                                   'user_id' => $user->id,
-                                                   'order_id' => null,
-                                                   'status' => 1,
-                                                   'referrer_id' => null,
-                                                   'card' => $request->get('card')
-                                               ]
+        if (
+            $settings && $amount >= $settings->minimimum_referral_payout_amount
+            && $user->referral_balance >= $amount
+        ) {
+            $transaction = Transaction::create(
+                [
+                    'uuid' => (string)Str::orderedUuid(),
+                    'stripe_id' => null,
+                    'amount' => $amount,
+                    'type' => 1,
+                    'user_id' => $user->id,
+                    'order_id' => null,
+                    'status' => 1,
+                    'referrer_id' => null,
+                    'card' => $request->get('card')
+                ]
             );
             $user->referral_balance = $user->referral_balance - $amount;
             $user->save();
@@ -310,5 +351,12 @@ class TransactionController extends Controller
         $transaction->save();
         return response()->json(['message' => 'Status updated']);
     }
-
+    public function updateCreditPayment(Request $request)
+    {
+        $transaction = Transaction::where('stripe_id', $request->get('id'))
+            ->firstOrFail();
+        $transaction->status = $request->status;
+        $transaction->save();
+        return response()->json(['message' => 'Status updated']);
+    }
 }
